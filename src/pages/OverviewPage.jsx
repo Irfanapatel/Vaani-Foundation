@@ -133,32 +133,38 @@ const OverviewPage = () => {
                   items={[
                     {
                       name: "Needs Assessment",
-                      quote: "Identifying key challenges and opportunities within communities through comprehensive research and engagement.",
+                      heading: "Deliver Transformative Impact at Scale",
+                      quote: "We design practical and community-focused models that can be expanded across multiple villages. Through research, local insights and efficient execution, we ensure every initiative creates long-term measurable impact.",
                       title: "🔍"
                     },
                     {
                       name: "Program Design",
-                      quote: "Developing targeted interventions based on evidence-based practices and community input.",
-                      title: "📋"
+                      heading: "Build Meaningful & Strategic Partnerships",
+                      quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
+                      title: "🤝"
                     },
                     {
                       name: "Community Engagement",
-                      quote: "Working collaboratively with local stakeholders to ensure ownership and sustainability.",
+                      heading: "Strengthen Community Voices & Participation",
+                      quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
                       title: "🤝"
                     },
                     {
                       name: "Implementation",
-                      quote: "Executing programs with measurable outcomes and continuous monitoring.",
+                      heading: "Innovate for Sustainable Futures",
+                      quote: `We bring forward simple yet meaningful innovations — from digital learning tools and green infrastructure to water conservation and eco-friendly livelihood practices. Our approach focuses on solutions that are practical, affordable, and future-ready, helping communities move toward long-term resilience and self-reliance.`,
                       title: "🚀"
                     },
                     {
                       name: "Impact Evaluation",
-                      quote: "Assessing effectiveness and making data-driven improvements.",
+                      heading: "Ensure Accountability & Transparent Governance",
+                      quote: `We uphold the highest standards of transparency through regular monitoring, field reporting, and impact documentation. Our processes are structured to maintain trust with communities, partners, and stakeholders. Every milestone is recorded, shared, and evaluated to ensure clarity and accountability at each stage.`,
                       title: "📊"
                     },
                     {
                       name: "Scaling & Replication",
-                      quote: "Expanding successful models to reach more communities.",
+                      heading: "Promote Sustainability Through Capacity Building",
+                      quote: `We believe that empowered communities sustain change on their own. By training local volunteers, strengthening self-help groups, and building leadership at the village level, we create development models that continue to thrive even after projects are completed. Our long-term goal is to inspire self-reliant villages capable of driving their own growth.`,
                       title: "🌱"
                     }
                   ]}
@@ -166,19 +172,14 @@ const OverviewPage = () => {
                   speed="normal"
                   pauseOnHover={true}
                   className="py-12"
-                  cardClassName="w-[320px] h-[340px] md:w-[380px] md:h-[380px]"
-                  contentClassName="px-2"
-                  titleClassName="text-5xl"
-                  nameClassName="text-blue-600"
-                  quoteClassName="text-gray-700 dark:text-gray-300"
+                  cardClassName="w-[320px] h-[380px] md:w-[380px] md:h-[420px]"
+                  contentClassName="px-4"
+                  titleClassName="text-5xl mb-4"
+                  nameClassName="text-blue-600 font-semibold"
+                  quoteClassName="text-gray-700 dark:text-gray-300 text-justify"
+                  headingClassName="text-xl font-bold text-gray-800 mb-3"
                 />
               </div>
-            </div>
-
-            <div className="mt-16 text-center">
-              <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                Learn More About Our Approach
-              </button>
             </div>
           </div>
         </div>

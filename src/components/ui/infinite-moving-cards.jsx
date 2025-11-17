@@ -196,8 +196,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className={cn(
-              "relative w-[320px] max-w-full shrink-0 rounded-2xl border border-zinc-200 bg-gradient-to-br p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-grab active:cursor-grabbing",
-              colors[idx % colors.length],
+              `relative w-[320px] max-w-full shrink-0 rounded-2xl border border-zinc-200 p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-grab active:cursor-grabbing bg-gradient-to-br ${colors[idx % colors.length]}`,
               "dark:border-zinc-700",
               cardClassName
             )}

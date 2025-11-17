@@ -42,7 +42,7 @@ const OverviewPage = () => {
       </header>
       
       <main className="grow">
-        <div className="relative w-full" style={{ height: '80vh', minHeight: '600px' }}>
+        <div className="relative w-full" style={{ height: '70vh', minHeight: '600px' }}>
           <div style={{ 
             position: 'relative',
             width: '100%',
@@ -117,73 +117,82 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="py-16 md:py-24 bg-white">
-          <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Theory of Change</h2>
-              <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-12"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                How we create lasting impact through strategic interventions and community empowerment
+        <div className="py-12 md:py-16 bg-white w-full">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 w-full">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Theory of Change</h2>
+              <p className="text-lg text-gray-600 max-w-6xl mx-auto leading-relaxed">
+                The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
             </div>
 
             <div className="relative">
-              <div className="relative w-full overflow-hidden">
-                <InfiniteMovingCards
-                  items={[
-                    {
-                      name: "Needs Assessment",
-                      heading: "Deliver Transformative Impact at Scale",
-                      quote: "We design practical and community-focused models that can be expanded across multiple villages. Through research, local insights and efficient execution, we ensure every initiative creates long-term measurable impact.",
-                      title: "🔍"
-                    },
-                    {
-                      name: "Program Design",
-                      heading: "Build Meaningful & Strategic Partnerships",
-                      quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
-                      title: "🤝"
-                    },
-                    {
-                      name: "Community Engagement",
-                      heading: "Strengthen Community Voices & Participation",
-                      quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
-                      title: "🤝"
-                    },
-                    {
-                      name: "Implementation",
-                      heading: "Innovate for Sustainable Futures",
-                      quote: `We bring forward simple yet meaningful innovations — from digital learning tools and green infrastructure to water conservation and eco-friendly livelihood practices. Our approach focuses on solutions that are practical, affordable, and future-ready, helping communities move toward long-term resilience and self-reliance.`,
-                      title: "🚀"
-                    },
-                    {
-                      name: "Impact Evaluation",
-                      heading: "Ensure Accountability & Transparent Governance",
-                      quote: `We uphold the highest standards of transparency through regular monitoring, field reporting, and impact documentation. Our processes are structured to maintain trust with communities, partners, and stakeholders. Every milestone is recorded, shared, and evaluated to ensure clarity and accountability at each stage.`,
-                      title: "📊"
-                    },
-                    {
-                      name: "Scaling & Replication",
-                      heading: "Promote Sustainability Through Capacity Building",
-                      quote: `We believe that empowered communities sustain change on their own. By training local volunteers, strengthening self-help groups, and building leadership at the village level, we create development models that continue to thrive even after projects are completed. Our long-term goal is to inspire self-reliant villages capable of driving their own growth.`,
-                      title: "🌱"
-                    }
-                  ]}
-                  direction="left"
-                  speed="normal"
-                  pauseOnHover={true}
-                  className="py-12"
-                  cardClassName="w-[320px] h-[380px] md:w-[380px] md:h-[420px]"
-                  contentClassName="px-4"
-                  titleClassName="text-5xl mb-4"
-                  nameClassName="text-blue-600 font-semibold"
-                  quoteClassName="text-gray-700 dark:text-gray-300 text-justify"
-                  headingClassName="text-xl font-bold text-gray-800 mb-3"
-                />
+              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner">
+                <div className="absolute inset-0 bg-grid-blue-200/30 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))] rounded-2xl"></div>
+                <div className="relative z-10">
+                  <InfiniteMovingCards
+                    colors={[
+                      'from-blue-100 to-blue-200',
+                      'from-green-100 to-green-200',
+                      'from-purple-100 to-purple-200',
+                      'from-amber-100 to-amber-200',
+                      'from-pink-100 to-pink-200',
+                      'from-teal-100 to-teal-200'
+                    ]}
+                    items={[
+                      {
+                        name: "Needs Assessment",
+                        heading: "Deliver Transformative Impact at Scale",
+                        quote: "We design practical and community-focused models that can be expanded across multiple villages. Through research, local insights and efficient execution, we ensure every initiative creates long-term measurable impact.",
+                        title: "🔍"
+                      },
+                      {
+                        name: "Program Design",
+                        heading: "Build Meaningful & Strategic Partnerships",
+                        quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
+                        title: "🤝"
+                      },
+                      {
+                        name: "Community Engagement",
+                        heading: "Strengthen Community Voices & Participation",
+                        quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
+                        title: "🤝"
+                      },
+                      {
+                        name: "Implementation",
+                        heading: "Innovate for Sustainable Futures",
+                        quote: "We adopt practical and future-ready solutions — from digital tools to sustainable livelihood models. Our focus is on innovations that are simple, affordable, and capable of building long-term resilience.",
+                        title: "🚀"
+                      },
+                      {
+                        name: "Impact Evaluation",
+                        heading: "Ensure Accountability & Transparent Governance",
+                        quote: "We maintain strong monitoring, reporting, and impact tracking processes. This transparent approach builds trust and ensures clarity at every stage of project implementation.",
+                        title: "📊"
+                      },
+                      {
+                        name: "Scaling & Replication",
+                        heading: "Promote Sustainability Through Capacity Building",
+                        quote: "We train local volunteers, strengthen groups, and support emerging leaders in rural communities. This enables villages to sustain progress independently and continue driving their own development.",
+                        title: "🌱"
+                      }
+                    ]}
+                    direction="left"
+                    speed="normal"
+                    pauseOnHover={true}
+                    className="py-12"
+                    cardClassName="w-[320px] h-[380px] md:w-[380px] md:h-[420px] p-8 rounded-2xl shadow-lg border border-white/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    contentClassName="px-4"
+                    titleClassName="text-5xl mb-4"
+                    nameClassName="text-blue-600 font-semibold"
+                    quoteClassName="text-gray-700 dark:text-gray-300 text-justify"
+                    headingClassName="text-xl font-bold text-gray-800 mb-3"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Navbar } from "../components/Layout/Navbar";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-
-// Import the image from assets
-import overviewImage from '../assets/Overview.jpg';
+import FlipCard from "@/components/ui/FlipCard";
+import "../styles/flip-card.css";
+import overviewImage from "../assets/Overview.jpg";
 
 // Log the image import
 console.log('Image import result:', {
@@ -117,17 +117,17 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="py-12 md:py-16 bg-white w-full">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 w-full">
+        <div className="pt-4 pb-12 md:pt-8 md:pb-16 bg-white w-full">
+          <div className="w-full">
+            <div className="text-center mb-12 w-full px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Theory of Change</h2>
-              <p className="text-lg text-gray-600 max-w-6xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed">
                 The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
             </div>
 
             <div className="relative">
-              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner">
+              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner max-w-[95%] sm:max-w-[90%] mx-auto">
                 <div className="absolute inset-0 bg-grid-blue-200/30 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))] rounded-2xl"></div>
                 <div className="relative z-10">
                   <InfiniteMovingCards
@@ -193,8 +193,61 @@ const OverviewPage = () => {
             </div>
           </div>
         </div>
+        <OurJourney />
       </main>
     </div>
+  );
+};
+
+const OurJourney = () => {
+  // Path to the education image
+  const educationImage = "/src/assets/field/EDUCATION.jpg";
+  
+  const journeyData = [
+    {
+      year: "2021",
+      title: "The Beginning",
+      description: "Launched our first community program focused on education in rural areas. Reached 10 villages and impacted 500+ lives through our initiatives.",
+      image: educationImage,
+      alt: "Vaani Foundation's education initiative in 2021"
+    },
+    {
+      year: "2022",
+      title: "Expansion",
+      description: "Expanded our reach to 5 new districts, launched health and livelihood programs, and established key partnerships with local organizations.",
+      image: educationImage,
+      alt: "Vaani Foundation's expansion in 2022"
+    },
+    {
+      year: "2023",
+      title: "Transformation",
+      description: "Reached a milestone of impacting 10,000+ lives. Launched digital education initiatives and established community learning centers across the region.",
+      image: educationImage,
+      alt: "Vaani Foundation's transformation in 2023"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
+          Our Journey in the Last Three Years
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {journeyData.map((item, index) => (
+            <div key={index} className="w-full">
+              <FlipCard
+                year={item.year}
+                title={item.title}
+                description={item.description}
+                imageSrc={item.image}
+                altText={item.alt}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

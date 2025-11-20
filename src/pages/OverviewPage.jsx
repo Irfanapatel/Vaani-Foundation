@@ -4,6 +4,12 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import FlipCard from "@/components/ui/FlipCard";
 import "../styles/flip-card.css";
 import overviewImage from "../assets/Overview.jpg";
+import educationImage from "../assets/journey/Education.png";
+import healthImage from "../assets/journey/health.jpg";
+import environmentImage from "../assets/journey/environment.png";
+import cricketImage from "../assets/journey/cricket.png";
+import solarImage from "../assets/journey/solar.png";
+import trainingImage from "../assets/journey/training.jpg";
 
 // Log the image import
 console.log('Image import result:', {
@@ -117,7 +123,7 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="pt-4 pb-12 md:pt-8 md:pb-16 bg-white w-full">
+        <div className="pt-12 pb-12 md:pt-12 md:pb-16 bg-white w-full">
           <div className="w-full">
             <div className="text-center mb-12 w-full px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Theory of Change</h2>
@@ -127,7 +133,7 @@ const OverviewPage = () => {
             </div>
 
             <div className="relative">
-              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner max-w-[95%] sm:max-w-[90%] mx-auto">
+              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner max-w-[1200px] mx-auto">
                 <div className="absolute inset-0 bg-grid-blue-200/30 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))] rounded-2xl"></div>
                 <div className="relative z-10">
                   <InfiniteMovingCards
@@ -200,48 +206,87 @@ const OverviewPage = () => {
 };
 
 const OurJourney = () => {
-  // Path to the education image
-  const educationImage = "/src/assets/field/EDUCATION.jpg";
-  
   const journeyData = [
     {
       year: "2021",
       title: "The Beginning",
       description: "Launched our first community program focused on education in rural areas. Reached 10 villages and impacted 500+ lives through our initiatives.",
       image: educationImage,
-      alt: "Vaani Foundation's education initiative in 2021"
+      alt: "Vaani Foundation's education initiative in 2021",
+      panelColor: "#f7cfd8",
+      panelTextColor: "#3b0d16",
+      buttonColor: "#8c1c32"
     },
     {
       year: "2022",
       title: "Expansion",
       description: "Expanded our reach to 5 new districts, launched health and livelihood programs, and established key partnerships with local organizations.",
-      image: educationImage,
-      alt: "Vaani Foundation's expansion in 2022"
+      image: healthImage,
+      alt: "Vaani Foundation's expansion in 2022",
+      panelColor: "#fce3c9",
+      panelTextColor: "#4b1d05",
+      buttonColor: "#c05621"
     },
     {
       year: "2023",
-      title: "Transformation",
-      description: "Reached a milestone of impacting 10,000+ lives. Launched digital education initiatives and established community learning centers across the region.",
-      image: educationImage,
-      alt: "Vaani Foundation's transformation in 2023"
+      title: "Environmental Focus",
+      description: "Launched major environmental initiatives including solar power projects and sustainable farming practices across multiple communities.",
+      image: environmentImage,
+      alt: "Vaani Foundation's environmental initiatives in 2023",
+      panelColor: "#e2f5e7",
+      panelTextColor: "#0f3d1f",
+      buttonColor: "#047857"
+    },
+    {
+      year: "2023",
+      title: "Solar Power Initiatives",
+      description: "Implemented solar power solutions in rural areas, providing clean energy to communities and reducing carbon footprint through sustainable practices.",
+      image: solarImage,
+      alt: "Vaani Foundation's solar power initiatives",
+      panelColor: "#fff3c7",
+      panelTextColor: "#4a3500",
+      buttonColor: "#d97706"
+    },
+    {
+      year: "2024",
+      title: "Skills Training",
+      description: "Launched vocational training programs to empower community members with valuable skills for better employment opportunities and self-sustainability.",
+      image: trainingImage,
+      alt: "Vaani Foundation's skills training programs",
+      panelColor: "#dee8ff",
+      panelTextColor: "#0a1c4a",
+      buttonColor: "#1d4ed8"
+    },
+    {
+      year: "2024",
+      title: "Sports Development",
+      description: "Established sports programs to engage youth and promote healthy lifestyles, with a focus on cricket as a tool for social development.",
+      image: cricketImage,
+      alt: "Vaani Foundation's sports development programs",
+      panelColor: "#ffe0ec",
+      panelTextColor: "#4a102b",
+      buttonColor: "#be185d"
     }
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-12 pb-16 md:pt-12 md:pb-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
           Our Journey in the Last Three Years
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-[1600px] mx-auto px-6">
           {journeyData.map((item, index) => (
-            <div key={index} className="w-full">
+            <div key={index} className="w-full flex justify-center">
               <FlipCard
                 year={item.year}
                 title={item.title}
                 description={item.description}
                 imageSrc={item.image}
                 altText={item.alt}
+                panelColor={item.panelColor}
+                panelTextColor={item.panelTextColor}
+                buttonColor={item.buttonColor}
               />
             </div>
           ))}

@@ -82,7 +82,7 @@ const OverviewPage = () => {
         </div>
 
         {/* Story Section */}
-        <div className="w-full bg-white py-12">
+        <div className="w-full bg-white pt-8 pb-12">
           <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6 text-lg text-gray-700 text-justify pr-8">
@@ -123,27 +123,27 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="pt-12 pb-12 md:pt-12 md:pb-16 bg-white w-full">
+        <div className="pt-8 pb-12 bg-white w-full">
           <div className="w-full">
             <div className="text-center mb-12 w-full px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Theory of Change</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-12">Our Theory of Change</h2>
               <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed">
                 The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
             </div>
 
             <div className="relative">
-              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner max-w-[1200px] mx-auto">
+              <div className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 backdrop-blur-sm p-8 rounded-2xl shadow-inner max-w-[1650px] mx-auto">
                 <div className="absolute inset-0 bg-grid-blue-200/30 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.7))] rounded-2xl"></div>
                 <div className="relative z-10">
                   <InfiniteMovingCards
                     colors={[
-                      'from-blue-100 to-blue-200',
-                      'from-green-100 to-green-200',
-                      'from-purple-100 to-purple-200',
-                      'from-amber-100 to-amber-200',
-                      'from-pink-100 to-pink-200',
-                      'from-teal-100 to-teal-200'
+                      'from-blue-50 to-blue-100',
+                      'from-sky-100 to-blue-200',
+                      'from-cyan-50 to-teal-100',
+                      'from-indigo-50 to-indigo-200',
+                      'from-violet-50 to-purple-200',
+                      'from-slate-50 to-slate-200'
                     ]}
                     items={[
                       {
@@ -270,12 +270,12 @@ const OurJourney = () => {
   ];
 
   return (
-    <section className="pt-12 pb-16 md:pt-12 md:pb-16 bg-white">
+    <section className="pt-8 pb-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-700">
           Our Journey in the Last Three Years
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-[1600px] mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10 max-w-[1600px] mx-auto px-6">
           {journeyData.map((item, index) => (
             <div key={index} className="w-full flex justify-center">
               <FlipCard

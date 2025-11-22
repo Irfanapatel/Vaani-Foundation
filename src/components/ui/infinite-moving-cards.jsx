@@ -135,7 +135,7 @@ export const InfiniteMovingCards = ({
         className
       )}
     >
-      <style jsx global>{`
+      <style>{`
         .scroller-mask {
           mask-image: linear-gradient(
             to right,
@@ -158,12 +158,12 @@ export const InfiniteMovingCards = ({
           will-change: transform;
           overflow-x: auto;
           overflow-y: hidden;
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
         
         .scroller-mask::-webkit-scrollbar {
-          display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+          display: none;
         }
         
         @keyframes scroll {
@@ -206,8 +206,8 @@ export const InfiniteMovingCards = ({
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}>
             <blockquote className="h-full flex flex-col">
-              <div className="shrink-0 mb-6 text-4xl">
-                {item.title}
+              <div className="shrink-0 mb-6 flex justify-center">
+                {item.icon || <span className="text-4xl">{item.title}</span>}
               </div>
               <div className={cn("grow flex flex-col", contentClassName)}>
                 {item.heading && (

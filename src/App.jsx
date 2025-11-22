@@ -27,7 +27,7 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
       <PinkBox />
       <div className="pt-8 pb-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">OUR FIELDS OF WORK</h2>
+          <h2 className="text-3xl font-bold text-blue-700 mb-8 text-center">OUR FIELDS OF WORK</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4">
             {fields.map((field) => (
               <div 

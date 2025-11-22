@@ -1,16 +1,16 @@
 import React from 'react';
 
 const FlipCard = ({
-  year,
   title,
   description,
+  bigNumber,
+  bigNumberDescription,
   imageSrc,
   altText = '',
-  ctaLabel = 'Read More',
+  ctaLabel = 'READ MORE',
   onCtaClick,
   panelColor = '#f7cfd8',
   panelTextColor = '#3b0d16',
-  buttonColor = '#1f2937',
   buttonTextColor = '#ffffff'
 }) => {
   const getImageSource = (src) => {
@@ -27,41 +27,50 @@ const FlipCard = ({
       style={{
         '--flip-panel-bg': panelColor,
         '--flip-panel-text': panelTextColor,
-        '--flip-button-bg': buttonColor,
+        '--flip-button-bg': '#000000',
         '--flip-button-text': buttonTextColor
       }}
     >
+
       <img
         src={getImageSource(imageSrc)}
         alt={altText || `${title} visual`}
         className="flip-card-image"
         onError={(e) => {
-          e.target.src = `https://via.placeholder.com/700x550/F3F4F6/6B7280?text=${year}`;
+          e.target.src = `https://via.placeholder.com/700x550/F3F4F6/6B7280?text=${title}`;
         }}
       />
 
       <div className="flip-card-panel">
-        <div className="flip-card-panel-content">
-          <span className="text-xs uppercase tracking-[0.4em] text-gray-500">
-            {year}
-          </span>
-          <h3 className="text-3xl font-bold text-gray-900 leading-tight mt-3 mb-4">
-            {title}
-          </h3>
-          <p className="text-base text-gray-600 leading-relaxed">
-            {description}
-          </p>
+        <div className="flip-card-panel-content flex flex-col items-center justify-center text-center h-full">
+          <div className="max-w-md">
+            <h3 className="inline-block bg-white text-black text-3xl md:text-4xl font-bold px-6 py-2 mb-6">
+              {title}
+            </h3>
+            <p className="text-black text-base leading-relaxed mb-6">
+              {description}
+            </p>
+            {bigNumber && (
+              <div className="text-center mb-6">
+                <div className="text-5xl font-bold text-black mb-2">
+                  {bigNumber}
+                </div>
+                <div className="text-base text-black">
+                  {bigNumberDescription}
+                </div>
+              </div>
+            )}
+            {ctaLabel && (
+              <button
+                type="button"
+                onClick={onCtaClick}
+                className="flip-card-panel-button font-medium tracking-wider px-8 py-3"
+              >
+                {ctaLabel}
+              </button>
+            )}
+          </div>
         </div>
-
-        {ctaLabel && (
-          <button
-            type="button"
-            onClick={onCtaClick}
-            className="flip-card-panel-button"
-          >
-            {ctaLabel}
-          </button>
-        )}
       </div>
     </div>
   );

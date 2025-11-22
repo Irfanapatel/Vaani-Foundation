@@ -10,6 +10,7 @@ import environmentImage from "../assets/journey/environment.png";
 import cricketImage from "../assets/journey/cricket.png";
 import solarImage from "../assets/journey/solar.png";
 import trainingImage from "../assets/journey/training.jpg";
+import { Globe, Handshake, Users, Lightbulb, SearchCheck, Leaf } from "lucide-react";
 
 // Log the image import
 console.log('Image import result:', {
@@ -145,44 +146,42 @@ const OverviewPage = () => {
                       'from-violet-50 to-purple-200',
                       'from-slate-50 to-slate-200'
                     ]}
-                    items={[
-                      {
-                        name: "Needs Assessment",
-                        heading: "Deliver Transformative Impact at Scale",
-                        quote: "We design practical and community-focused models that can be expanded across multiple villages. Through research, local insights and efficient execution, we ensure every initiative creates long-term measurable impact.",
-                        title: "🔍"
-                      },
-                      {
-                        name: "Program Design",
-                        heading: "Build Meaningful & Strategic Partnerships",
-                        quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
-                        title: "🤝"
-                      },
-                      {
-                        name: "Community Engagement",
-                        heading: "Strengthen Community Voices & Participation",
-                        quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
-                        title: "🤝"
-                      },
-                      {
-                        name: "Implementation",
-                        heading: "Innovate for Sustainable Futures",
-                        quote: "We adopt practical and future-ready solutions — from digital tools to sustainable livelihood models. Our focus is on innovations that are simple, affordable, and capable of building long-term resilience.",
-                        title: "🚀"
-                      },
-                      {
-                        name: "Impact Evaluation",
-                        heading: "Ensure Accountability & Transparent Governance",
-                        quote: "We maintain strong monitoring, reporting, and impact tracking processes. This transparent approach builds trust and ensures clarity at every stage of project implementation.",
-                        title: "📊"
-                      },
-                      {
-                        name: "Scaling & Replication",
-                        heading: "Promote Sustainability Through Capacity Building",
-                        quote: "We train local volunteers, strengthen groups, and support emerging leaders in rural communities. This enables villages to sustain progress independently and continue driving their own development.",
-                        title: "🌱"
-                      }
-                    ]}
+                    items={(() => {
+                      const items = [
+                        {
+                          heading: "Deliver Transformative Impact at Scale",
+                          quote: "We design practical and community-focused models that can be expanded across multiple villages. Through research, local insights and efficient execution, we ensure every initiative creates long-term measurable impact.",
+                          icon: <Globe className="w-16 h-16 text-blue-600" />
+                        },
+                        {
+                          heading: "Build Meaningful & Strategic Partnerships",
+                          quote: "We collaborate with CSR partners, government bodies and local institutions to strengthen outreach and amplify results. These partnerships help combine resources, expertise, and trust for collective progress.",
+                          icon: <Handshake className="w-16 h-16 text-blue-600" />
+                        },
+                        {
+                          heading: "Strengthen Community Voices & Participation",
+                          quote: "We involve women, youth, farmers, and vulnerable groups in planning and decision-making. By promoting participation and awareness, we ensure every solution reflects real community needs.",
+                          icon: <Users className="w-16 h-16 text-blue-600" />
+                        },
+                        {
+                          heading: "Innovate for Sustainable Futures",
+                          quote: "We adopt practical and future-ready solutions — from digital tools to sustainable livelihood models. Our focus is on innovations that are simple, affordable, and capable of building long-term resilience.",
+                          icon: <Lightbulb className="w-16 h-16 text-blue-600" />
+                        },
+                        {
+                          heading: "Ensure Accountability & Transparent Governance",
+                          quote: "We maintain strong monitoring, reporting, and impact tracking processes. This transparent approach builds trust and ensures clarity at every stage of project implementation.",
+                          icon: <SearchCheck className="w-16 h-16 text-blue-600" />
+                        },
+                        {
+                          heading: "Promote Sustainability Through Capacity Building",
+                          quote: "We train local volunteers, strengthen groups, and support emerging leaders in rural communities. This enables villages to sustain progress independently and continue driving their own development.",
+                          icon: <Leaf className="w-16 h-16 text-blue-600" />
+                        }
+                      ];
+                      console.log('Carousel Items:', items);
+                      return items;
+                    })()}
                     direction="left"
                     speed="normal"
                     pauseOnHover={true}
@@ -208,9 +207,10 @@ const OverviewPage = () => {
 const OurJourney = () => {
   const journeyData = [
     {
-      year: "2021",
-      title: "The Beginning",
-      description: "Launched our first community program focused on education in rural areas. Reached 10 villages and impacted 500+ lives through our initiatives.",
+      title: "Bright Minds Initiative",
+      description: "We support children with learning kits, books and essential school resources to keep their education journey active and strong.",
+      bigNumber: "3,000+",
+      bigNumberDescription: "Children have received educational support through Vaani Foundation.",
       image: educationImage,
       alt: "Vaani Foundation's education initiative in 2021",
       panelColor: "#f7cfd8",
@@ -218,9 +218,10 @@ const OurJourney = () => {
       buttonColor: "#8c1c32"
     },
     {
-      year: "2022",
-      title: "Expansion",
-      description: "Expanded our reach to 5 new districts, launched health and livelihood programs, and established key partnerships with local organizations.",
+      title: "Smart Rural Health",
+      description: "We support rural healthcare by supplying medical equipment and modern digital record tools to PHCs.",
+      bigNumber: "3+",
+      bigNumberDescription: "PHCs Digitized, Making healthcare quicker, smoother and more reliable for villages.",
       image: healthImage,
       alt: "Vaani Foundation's expansion in 2022",
       panelColor: "#fce3c9",
@@ -228,9 +229,10 @@ const OurJourney = () => {
       buttonColor: "#c05621"
     },
     {
-      year: "2023",
-      title: "Environmental Focus",
-      description: "Launched major environmental initiatives including solar power projects and sustainable farming practices across multiple communities.",
+      title: "Environment & Plantation",
+      description: "We promote environmental care through plantation drives and eco-awareness activities.",
+      bigNumber: "1,00,000+",
+      bigNumberDescription: "Creating greener and cleaner rural landscapes.",
       image: environmentImage,
       alt: "Vaani Foundation's environmental initiatives in 2023",
       panelColor: "#e2f5e7",
@@ -238,9 +240,10 @@ const OurJourney = () => {
       buttonColor: "#047857"
     },
     {
-      year: "2023",
-      title: "Solar Power Initiatives",
-      description: "Implemented solar power solutions in rural areas, providing clean energy to communities and reducing carbon footprint through sustainable practices.",
+      title: "Solar & Energy Project",
+      description: "We enable safe, sustainable, and cost-free lighting in rural communities through solar installations",
+      bigNumber: "150+",
+      bigNumberDescription: "solar street lights installed across villages, improving night-time safety and visibility.",
       image: solarImage,
       alt: "Vaani Foundation's solar power initiatives",
       panelColor: "#fff3c7",
@@ -248,9 +251,10 @@ const OurJourney = () => {
       buttonColor: "#d97706"
     },
     {
-      year: "2024",
-      title: "Skills Training",
-      description: "Launched vocational training programs to empower community members with valuable skills for better employment opportunities and self-sustainability.",
+      title: "She Leads, She Grows",
+      description: "We empower rural women through specialized Krishi Sakhi and Pashu Sakhi training, helping them become skilled community resource persons in agriculture and livestock care.",
+      bigNumber: "1,000+",
+      bigNumberDescription: "Women trained in agriculture and livestock care.",
       image: trainingImage,
       alt: "Vaani Foundation's skills training programs",
       panelColor: "#dee8ff",
@@ -258,9 +262,10 @@ const OurJourney = () => {
       buttonColor: "#1d4ed8"
     },
     {
-      year: "2024",
-      title: "Sports Development",
-      description: "Established sports programs to engage youth and promote healthy lifestyles, with a focus on cricket as a tool for social development.",
+      title: "Cricket for Confidence",
+      description: "We promote sports participation among rural youth by providing cricket kits and organizing local tournaments.",
+      bigNumber: "300+",
+      bigNumberDescription: "young players involved in cricket activities that inspire teamwork and discipline.",
       image: cricketImage,
       alt: "Vaani Foundation's sports development programs",
       panelColor: "#ffe0ec",
@@ -279,9 +284,10 @@ const OurJourney = () => {
           {journeyData.map((item, index) => (
             <div key={index} className="w-full flex justify-center">
               <FlipCard
-                year={item.year}
                 title={item.title}
                 description={item.description}
+                bigNumber={item.bigNumber}
+                bigNumberDescription={item.bigNumberDescription}
                 imageSrc={item.image}
                 altText={item.alt}
                 panelColor={item.panelColor}

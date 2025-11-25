@@ -1,0 +1,230 @@
+import React from 'react';
+import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { HeartHandshake, Sparkles, Users } from 'lucide-react';
+import missionGif from '../assets/mission.gif';
+
+// Inline styles instead of styled components
+const styles = {
+  heroSection: (isMobile) => ({
+    position: 'relative',
+    width: '100%',
+    height: isMobile ? '60vh' : '70vh',
+    minHeight: '600px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden'
+  }),
+  heroContent: {
+    position: 'relative',
+    zIndex: 2,
+    textAlign: 'center',
+    color: '#fff',
+    padding: '2rem',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: '8px',
+    backdropFilter: 'blur(2px)',
+    maxWidth: '800px',
+    margin: '0 auto'
+  },
+  heroGif: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    zIndex: 1
+  },
+  section: {
+    padding: '4rem 0',
+    backgroundColor: '#f9f9f9'
+  },
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 1rem'
+  },
+  commitmentsSection: {
+    py: 8,
+    backgroundColor: '#f5f5f5',
+  },
+  cardsContainer: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    gap: 4,
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    flexWrap: 'wrap',
+    mb: 4,
+  },
+  card: {
+    flex: '1 1 300px',
+    maxWidth: '280px',
+    backgroundColor: 'white',
+    borderRadius: 2,
+    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+    overflow: 'visible',
+    display: 'flex',
+    flexDirection: 'column',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    position: 'relative',
+    marginTop: '30px',
+    '&:hover': {
+      transform: 'translateY(-5px)',
+      boxShadow: '0 8px 25px rgba(0,0,0,0.12)'
+    },
+  },
+  cardHeader: {
+    height: '100px',
+    position: 'relative',
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      bottom: '-55px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '110px',
+      height: '110px',
+      backgroundColor: 'white',
+      borderRadius: '50%',
+      zIndex: 1,
+    }
+  },
+  cardIcon: {
+    position: 'absolute',
+    bottom: '0',
+    left: '50%',
+    transform: 'translate(-50%, 50%)',
+    width: '110px',
+    height: '110px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 2,
+    color: '#333',
+    borderRadius: '50%',
+  },
+  cardText: {
+    p: 3,
+    textAlign: 'center',
+    fontSize: '1.1rem',
+    lineHeight: 1.7,
+    color: '#333',
+    flexGrow: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '220px',
+    paddingTop: '40px',
+  },
+  commitmentFooter: {
+    textAlign: 'center',
+    fontSize: '1.1rem',
+    color: '#555',
+    fontStyle: 'italic',
+    mt: 6,
+    maxWidth: '800px',
+    mx: 'auto',
+    lineHeight: 1.8,
+  }
+};
+
+const MissionVision = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  return (
+    <Box>
+      <Box sx={styles.heroSection(isMobile)}>
+        <img 
+          src={missionGif} 
+          alt="Mission and Vision" 
+          loading="lazy"
+          style={styles.heroGif}
+        />
+      </Box>
+
+      <Box sx={styles.section}>
+        <Container maxWidth={false} sx={{ maxWidth: '1400px', px: 4 }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600 uppercase">
+            VAANI FOUNDATION MISSION AND VISION
+          </h2>
+          <div className="space-y-6">
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+              Vaani Foundation is a grassroots-driven nonprofit organization committed to uplifting underserved and marginalized communities across rural India. Since our inception, we have been working to ensure that every individual—regardless of their background—has access to education, healthcare, livelihood opportunities, and a dignified life.
+            </Typography>
+
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+              We strongly believe that progress becomes meaningful only when it reaches those who need it the most. Guided by compassion, transparency, and long-term commitment, we work hand-in-hand with communities to build sustainable and self-reliant futures. With a bold vision and community-led approach, we strive to deliver practical solutions that create measurable, lasting impact.
+            </Typography>
+
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+              Across villages and rural regions, Vaani Foundation implements programs focused on education support, women empowerment, livelihood training, environmental conservation, and improved healthcare access. Our initiatives address local needs, strengthen community capacities, and create opportunities for growth and empowerment.
+              </Typography>
+
+              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+                We are proud to contribute to equitable development by collaborating with CSR partners, government bodies, and local institutions. Together, we work to reduce inequalities, support vulnerable groups, and build resilient communities capable of driving their own progress.
+              </Typography>
+
+              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+                By transforming challenges into opportunities, we stay committed to shaping a future where every person—especially the underserved—can learn, grow, and live with dignity. At Vaani Foundation, we don’t just dream of change—we work every day to make it a reality.
+              </Typography>
+          </div>
+        </Container>
+      </Box>
+
+      {/* Commitments Section */}
+      <Box sx={styles.commitmentsSection}>
+        <Container maxWidth={false} sx={{ maxWidth: '1400px', px: 4 }}>
+          <div className="space-y-6">
+            
+            <Box sx={styles.cardsContainer}>
+              {/* Card 1 */}
+              <Box sx={styles.card}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor: '#81c784' }}>
+                  <Box sx={styles.cardIcon}>
+                    <HeartHandshake size={64} strokeWidth={1.5} />
+                  </Box>
+                </Box>
+                <Typography variant="body1" sx={styles.cardText}>
+                  We stand with every community dreaming of a better tomorrow
+                </Typography>
+              </Box>
+
+              {/* Card 2 */}
+              <Box sx={styles.card}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor: '#4db6ac' }}>
+                  <Box sx={styles.cardIcon}>
+                    <Sparkles size={64} strokeWidth={1.5} />
+                  </Box>
+                </Box>
+                <Typography variant="body1" sx={styles.cardText}>
+                  Every child deserves a future built on opportunity, not limitation.
+                </Typography>
+              </Box>
+
+              {/* Card 3 */}
+              <Box sx={styles.card}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor: '#ba68c8' }}>
+                  <Box sx={styles.cardIcon}>
+                    <Users size={64} strokeWidth={1.5} />
+                  </Box>
+                </Box>
+                <Typography variant="body1" sx={styles.cardText}>
+                  When women rise, families thrive — and communities transform
+                </Typography>
+              </Box>
+            </Box>
+
+            <Typography variant="body1" sx={styles.commitmentFooter}>
+              While we work to fulfill our vision, our mission statement endlessly inspires us.
+            </Typography>
+          </div>
+        </Container>
+      </Box>
+    </Box>
+  );
+};
+
+export default MissionVision;

@@ -127,7 +127,7 @@ const OverviewPage = () => {
         <div className="pt-8 pb-12 bg-white w-full">
           <div className="w-full">
             <div className="text-center mb-12 w-full px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-12">Our Theory of Change</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-12 uppercase">OUR THEORY OF CHANGE</h2>
               <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed">
                 The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
@@ -277,8 +277,8 @@ const OurJourney = () => {
   return (
     <section className="pt-8 pb-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-700">
-          Our Journey in the Last Three Years
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-700 uppercase">
+          OUR JOURNEY IN THE LAST THREE YEARS
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10 max-w-[1600px] mx-auto px-6">
           {journeyData.map((item, index) => (

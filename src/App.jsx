@@ -6,6 +6,7 @@ import PinkBox from "./components/sections/PinkBox"
 import CometCard from "./components/ui/comet-card"
 import Projectsection from "./components/sections/Projectsection"
 import OverviewPage from "./pages/OverviewPage";
+import MissionVision from "./pages/MissionVision";
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -16,6 +17,7 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
     return (
       <Routes>
         <Route path="/about/overview" element={<OverviewPage />} />
+        <Route path="/about/mission-vision" element={<MissionVision />} />
       </Routes>
     );
   }

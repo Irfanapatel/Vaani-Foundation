@@ -13,7 +13,7 @@ export function Navbar() {
       href: '/about',
       dropdown: [
         { name: 'Overview', href: '/about/overview' },
-        { name: 'Mission & Vision', href: '#' },
+        { name: 'Mission & Vision', href: '/about/mission-vision' },
         { name: 'Our Team', href: '#' },
         { name: 'Our Partners', href: '#' },
         { name: 'Financials', href: '#' },

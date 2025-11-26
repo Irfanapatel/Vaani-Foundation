@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HeartHandshake, Sparkles, Users } from 'lucide-react';
-import missionGif from '../assets/mission.gif';
+import missionVideo from '../assets/mission.mp4';
 
 // Inline styles instead of styled components
 const styles = {
@@ -153,12 +153,16 @@ const MissionVision = () => {
   return (
     <Box>
       <Box sx={styles.heroSection(isMobile)}>
-        <img 
-          src={missionGif} 
-          alt="Mission and Vision" 
-          loading="lazy"
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
           style={styles.heroGif}
-        />
+        >
+          <source src={missionVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </Box>
 
       <Box sx={styles.section}>

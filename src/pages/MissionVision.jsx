@@ -37,7 +37,7 @@ const styles = {
     zIndex: 1
   },
   section: {
-    padding: '4rem 0',
+    padding: '4rem 0 2rem',
     backgroundColor: '#f9f9f9'
   },
   container: {
@@ -46,13 +46,28 @@ const styles = {
     padding: '0 1rem'
   },
   commitmentsSection: {
-    py: 8,
-    backgroundColor: '#f5f5f5',
+    py: 1,
+    width: '100%',
+    backgroundColor: '#dbeafe', // blue-100
+    '& .MuiContainer-root': {
+      maxWidth: '1650px',
+      margin: '0 auto',
+      padding: '0.5rem',
+      position: 'relative',
+      overflow: 'hidden',
+      '@media (max-width: 600px)': {
+        padding: '1rem',
+      },
+    },
+    '& > *': {
+      position: 'relative',
+      zIndex: 1,
+    },
   },
   cardsContainer: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    gap: 4,
+    gap: 6,
     justifyContent: 'center',
     alignItems: 'stretch',
     flexWrap: 'wrap',
@@ -62,21 +77,22 @@ const styles = {
     flex: '1 1 300px',
     maxWidth: '280px',
     backgroundColor: 'white',
-    borderRadius: 2,
-    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-    overflow: 'visible',
+    borderRadius: '16px',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+    overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    transition: 'all 0.3s ease',
     position: 'relative',
     marginTop: '30px',
+    border: '1px solid rgba(0,0,0,0.05)',
     '&:hover': {
       transform: 'translateY(-5px)',
-      boxShadow: '0 8px 25px rgba(0,0,0,0.12)'
+      boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
     },
   },
   cardHeader: {
-    height: '100px',
+    height: '70px',
     position: 'relative',
     '&:after': {
       content: '""',
@@ -115,7 +131,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: '220px',
+    minHeight: '260px',
     paddingTop: '40px',
   },
   commitmentFooter: {
@@ -176,13 +192,13 @@ const MissionVision = () => {
 
       {/* Commitments Section */}
       <Box sx={styles.commitmentsSection}>
-        <Container maxWidth={false} sx={{ maxWidth: '1400px', px: 4 }}>
+        <Container maxWidth={false} sx={{ maxWidth: '1400px' }}>
           <div className="space-y-6">
             
             <Box sx={styles.cardsContainer}>
               {/* Card 1 */}
               <Box sx={styles.card}>
-                <Box sx={{ ...styles.cardHeader, backgroundColor: '#81c784' }}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor: '#93c5fd' }}>
                   <Box sx={styles.cardIcon}>
                     <HeartHandshake size={64} strokeWidth={1.5} />
                   </Box>
@@ -194,7 +210,7 @@ const MissionVision = () => {
 
               {/* Card 2 */}
               <Box sx={styles.card}>
-                <Box sx={{ ...styles.cardHeader, backgroundColor: '#4db6ac' }}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor: '#d8b4fe' }}>
                   <Box sx={styles.cardIcon}>
                     <Sparkles size={64} strokeWidth={1.5} />
                   </Box>
@@ -206,7 +222,7 @@ const MissionVision = () => {
 
               {/* Card 3 */}
               <Box sx={styles.card}>
-                <Box sx={{ ...styles.cardHeader, backgroundColor: '#ba68c8' }}>
+                <Box sx={{ ...styles.cardHeader, backgroundColor:'#5eead4' }}>
                   <Box sx={styles.cardIcon}>
                     <Users size={64} strokeWidth={1.5} />
                   </Box>

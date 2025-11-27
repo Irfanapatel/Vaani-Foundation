@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HeartHandshake, Sparkles, Users } from 'lucide-react';
 import missionVideo from '../assets/mission.mp4';
+import missionImage from '../assets/images.jpg';
+import childrenPic from '../assets/Children-pic.jpg';
 
 // Inline styles instead of styled components
 const styles = {
@@ -39,6 +41,40 @@ const styles = {
   section: {
     padding: '4rem 0 2rem',
     backgroundColor: '#f9f9f9'
+  },
+  visionMissionWrapper: {
+    width: '100%',
+    backgroundColor: '#ffffff',
+  },
+  visionMissionRow: (isReverse) => ({
+    display: 'flex',
+    flexDirection: isReverse ? 'row-reverse' : 'row',
+    alignItems: 'stretch',
+    justifyContent: 'stretch',
+    minHeight: '360px',
+    '@media (max-width: 900px)': {
+      flexDirection: 'column',
+      minHeight: 'auto',
+    },
+  }),
+  visionMissionText: (bgColor) => ({
+    flex: '0 0 50%',
+    padding: { xs: '2.5rem 1.5rem', md: '3.5rem 3rem' },
+    backgroundColor: bgColor,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  }),
+  visionMissionImageBox: {
+    flex: '0 0 50%',
+    position: 'relative',
+    overflow: 'hidden',
+    display: 'flex',
+  },
+  visionMissionImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
   container: {
     maxWidth: '1200px',
@@ -242,6 +278,79 @@ const MissionVision = () => {
             </Typography>
           </div>
         </Container>
+      </Box>
+
+      {/* Our Vision & Our Mission section */}
+      <Box sx={styles.visionMissionWrapper}>
+        {/* Vision row */}
+        <Box sx={styles.visionMissionRow(false)}>
+          <Box sx={styles.visionMissionText('#e7caf6')}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                fontFamily: '"Playfair Display", serif',
+              }}
+            >
+              Our Vision
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 500,
+                lineHeight: 1.6,
+              }}
+            >
+              Build a world where every child and every marginalized community
+              has the right to survival, safety, development, and participation
+              in a life of dignity.
+            </Typography>
+          </Box>
+          <Box sx={styles.visionMissionImageBox}>
+            <Box
+              component="img"
+              src={childrenPic}
+              alt="Children - Vaani Foundation vision"
+              sx={styles.visionMissionImage}
+            />
+          </Box>
+        </Box>
+
+        {/* Mission row (reverse order on desktop) */}
+        <Box sx={styles.visionMissionRow(true)}>
+          <Box sx={styles.visionMissionText('#f9c3c7')}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                fontFamily: '"Playfair Display", serif',
+              }}
+            >
+              Our Mission
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 500,
+                lineHeight: 1.6,
+              }}
+            >
+              To inspire meaningful change in the way society engages with
+              vulnerable communities, and to create immediate and lasting
+              impact through education, healthcare, and livelihood programmes.
+            </Typography>
+          </Box>
+          <Box sx={styles.visionMissionImageBox}>
+            <Box
+              component="img"
+              src={missionImage}
+              alt="Community work - Vaani Foundation mission"
+              sx={styles.visionMissionImage}
+            />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

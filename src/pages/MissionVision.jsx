@@ -45,6 +45,19 @@ const styles = {
   visionMissionWrapper: {
     width: '100%',
     backgroundColor: '#ffffff',
+    padding: '0 0 1rem',
+    '& > div': {
+      maxWidth: '1600px',
+      margin: '0 auto',
+      padding: '0',
+      width: '100%',
+    },
+    '@media (max-width: 900px)': {
+      padding: '1.5rem 0 0.75rem',
+      '& > div': {
+        padding: '0',
+      },
+    },
   },
   visionMissionRow: (isReverse) => ({
     display: 'flex',
@@ -200,30 +213,35 @@ const MissionVision = () => {
           Your browser does not support the video tag.
         </video>
       </Box>
-
+{/*Vaani Foundation */}
       <Box sx={styles.section}>
-        <Container maxWidth={false} sx={{ maxWidth: '1400px', px: 4 }}>
+        <Container maxWidth={false} sx={{ 
+          maxWidth: '1600px', 
+          px: { xs: 4, md: 6 },
+          width: '100%',
+          margin: '0 auto'
+        }}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600 uppercase">
             VAANI FOUNDATION MISSION AND VISION
           </h2>
           <div className="space-y-6">
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
               Vaani Foundation is a grassroots-driven nonprofit organization committed to uplifting underserved and marginalized communities across rural India. Since our inception, we have been working to ensure that every individual—regardless of their background—has access to education, healthcare, livelihood opportunities, and a dignified life.
             </Typography>
 
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
               We strongly believe that progress becomes meaningful only when it reaches those who need it the most. Guided by compassion, transparency, and long-term commitment, we work hand-in-hand with communities to build sustainable and self-reliant futures. With a bold vision and community-led approach, we strive to deliver practical solutions that create measurable, lasting impact.
             </Typography>
 
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
               Across villages and rural regions, Vaani Foundation implements programs focused on education support, women empowerment, livelihood training, environmental conservation, and improved healthcare access. Our initiatives address local needs, strengthen community capacities, and create opportunities for growth and empowerment.
               </Typography>
 
-              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
                 We are proud to contribute to equitable development by collaborating with CSR partners, government bodies, and local institutions. Together, we work to reduce inequalities, support vulnerable groups, and build resilient communities capable of driving their own progress.
               </Typography>
 
-              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'justify' }}>
+              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
                 By transforming challenges into opportunities, we stay committed to shaping a future where every person—especially the underserved—can learn, grow, and live with dignity. At Vaani Foundation, we don’t just dream of change—we work every day to make it a reality.
               </Typography>
           </div>
@@ -232,7 +250,7 @@ const MissionVision = () => {
 
       {/* Commitments Section */}
       <Box sx={styles.commitmentsSection}>
-        <Container maxWidth={false} sx={{ maxWidth: '1400px' }}>
+        <Container maxWidth={false} sx={{ maxWidth: '1600px' }}>
           <div className="space-y-6">
             
             <Box sx={styles.cardsContainer}>

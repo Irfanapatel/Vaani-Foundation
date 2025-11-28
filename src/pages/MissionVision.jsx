@@ -40,14 +40,32 @@ const styles = {
   },
   section: {
     padding: '4rem 0 2rem',
-    backgroundColor: '#f9f9f9'
+    backgroundColor: '#f9f9f9',
+    '& > .vaani-foundation-container': {
+      maxWidth: '1400px',
+      margin: '0 auto',
+      padding: '0 1rem',
+      width: '100%',
+      '@media (max-width: 900px)': {
+        padding: '0 0.5rem',
+      },
+    }
+  },
+  vaaniFoundationContainer: {
+    maxWidth: '1400px',
+    margin: '0 auto',
+    padding: '0 1rem',
+    width: '100%',
+    '@media (max-width: 900px)': {
+      padding: '0 0.5rem',
+    },
   },
   visionMissionWrapper: {
     width: '100%',
     backgroundColor: '#ffffff',
     padding: '0 0 1rem',
     '& > div': {
-      maxWidth: '1600px',
+      maxWidth: '1400px',
       margin: '0 auto',
       padding: '0',
       width: '100%',
@@ -64,25 +82,32 @@ const styles = {
     flexDirection: isReverse ? 'row-reverse' : 'row',
     alignItems: 'stretch',
     justifyContent: 'stretch',
-    minHeight: '360px',
+    height: '520px !important',
+    minHeight: '520px !important',
+    maxHeight: '520px !important',
     '@media (max-width: 900px)': {
       flexDirection: 'column',
-      minHeight: 'auto',
+      height: 'auto !important',
+      minHeight: 'auto !important',
+      maxHeight: 'none !important',
     },
   }),
   visionMissionText: (bgColor) => ({
     flex: '0 0 50%',
-    padding: { xs: '2.5rem 1.5rem', md: '3.5rem 3rem' },
+    padding: { xs: '1.5rem 1rem', md: '2rem 2rem' },
     backgroundColor: bgColor,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    height: '100%',
+    overflow: 'auto',
   }),
   visionMissionImageBox: {
     flex: '0 0 50%',
     position: 'relative',
     overflow: 'hidden',
     display: 'flex',
+    height: '100%',
   },
   visionMissionImage: {
     width: '100%',
@@ -215,12 +240,7 @@ const MissionVision = () => {
       </Box>
 {/*Vaani Foundation */}
       <Box sx={styles.section}>
-        <Container maxWidth={false} sx={{ 
-          maxWidth: '1600px', 
-          px: { xs: 4, md: 6 },
-          width: '100%',
-          margin: '0 auto'
-        }}>
+        <Box className="vaani-foundation-container" sx={styles.vaaniFoundationContainer}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600 uppercase">
             VAANI FOUNDATION MISSION AND VISION
           </h2>
@@ -245,12 +265,17 @@ const MissionVision = () => {
                 By transforming challenges into opportunities, we stay committed to shaping a future where every person—especially the underserved—can learn, grow, and live with dignity. At Vaani Foundation, we don’t just dream of change—we work every day to make it a reality.
               </Typography>
           </div>
-        </Container>
+        </Box>
       </Box>
 
       {/* Commitments Section */}
       <Box sx={styles.commitmentsSection}>
-        <Container maxWidth={false} sx={{ maxWidth: '1600px' }}>
+        <Box className="vaani-foundation-container" sx={{
+          maxWidth: '1400px',
+          px: { xs: 4, md: 6 },
+          width: '100%',
+          margin: '0 auto'
+        }}>
           <div className="space-y-6">
             
             <Box sx={styles.cardsContainer}>
@@ -291,11 +316,9 @@ const MissionVision = () => {
               </Box>
             </Box>
 
-            <Typography variant="body1" sx={styles.commitmentFooter}>
-              While we work to fulfill our vision, our mission statement endlessly inspires us.
-            </Typography>
+          
           </div>
-        </Container>
+        </Box>
       </Box>
 
       {/* Our Vision & Our Mission section */}

@@ -4,7 +4,8 @@ import logo from '../../assets/vaani foundation.png'
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isAboutHovered, setIsAboutHovered] = useState(false)
+  // Track which dropdown (if any) is currently hovered
+  const [hoveredDropdown, setHoveredDropdown] = useState(null)
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -20,7 +21,18 @@ export function Navbar() {
         { name: 'Careers', href: '#' }
       ]
     },
-    { name: 'What we do', href: '#' },
+    { 
+      name: 'What we do', 
+      href: '/what-we-do',
+      dropdown: [
+        { name: 'Education & Learning', href: '/what-we-do/education' },
+        { name: 'Community Health Services', href: '#' },
+        { name: 'Environmental Sustainability', href: '#' },
+        { name: 'Women Empowerment & Livelihoods', href: '#' },
+        { name: 'Rural Livelihood Support', href: '#' },
+        { name: 'Youth Engagement Programs', href: '#' },
+      ]
+    },
     { name: 'Contact Us', href: '#' },
     { name: 'Blog', href: '#' }
   ]
@@ -58,8 +70,8 @@ export function Navbar() {
                 <div 
                   key={item.name} 
                   className="relative group"
-                  onMouseEnter={() => item.dropdown && setIsAboutHovered(true)}
-                  onMouseLeave={() => item.dropdown && setIsAboutHovered(false)}
+                  onMouseEnter={() => item.dropdown && setHoveredDropdown(item.name)}
+                  onMouseLeave={() => item.dropdown && setHoveredDropdown(null)}
                 >
                   <a
                     href={item.href}
@@ -69,7 +81,7 @@ export function Navbar() {
                     {item.dropdown && <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />}
                   </a>
                   
-                  {item.dropdown && isAboutHovered && (
+                    {item.dropdown && hoveredDropdown === item.name && (
                     <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
                       {item.dropdown.map((subItem) => (
                         <a

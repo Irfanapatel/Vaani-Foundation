@@ -8,6 +8,7 @@ import Projectsection from "./components/sections/Projectsection"
 import OverviewPage from "./pages/OverviewPage";
 import MissionVision from "./pages/MissionVision";
 import OurTeam from "./pages/OurTeam";
+import Education from "./pages/Education";
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -20,6 +21,14 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
         <Route path="/about/overview" element={<OverviewPage />} />
         <Route path="/about/mission-vision" element={<MissionVision />} />
         <Route path="/about/our-team" element={<OurTeam />} />
+      </Routes>
+    );
+  }
+
+  if (location.pathname.startsWith('/what-we-do/')) {
+    return (
+      <Routes>
+        <Route path="/what-we-do/education" element={<Education />} />
       </Routes>
     );
   }

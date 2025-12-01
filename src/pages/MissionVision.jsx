@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { HeartHandshake, Sparkles, Users } from 'lucide-react';
 import missionVideo from '../assets/mission.mp4';
 import missionImage from '../assets/images.jpg';
@@ -7,16 +7,16 @@ import childrenPic from '../assets/Children-pic.jpg';
 
 // Inline styles instead of styled components
 const styles = {
-  heroSection: (isMobile) => ({
+  heroSection: {
     position: 'relative',
     width: '100%',
-    height: isMobile ? '60vh' : '70vh',
-    minHeight: '600px',
+    height: { xs: '35vh', sm: '40vh', md: '47vh', lg: '55vh' },
+    marginTop: '120px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden'
-  }),
+    overflow: 'hidden',
+  },
   heroContent: {
     position: 'relative',
     zIndex: 2,
@@ -36,10 +36,12 @@ const styles = {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    objectPosition: 'left',
     zIndex: 1
   },
   section: {
-    padding: '4rem 0 2rem',
+    paddingTop: { xs: '0.5rem', sm: '1rem', md: '1.5rem', lg: '2rem' },
+    paddingBottom: '2rem',
     backgroundColor: '#f9f9f9',
     '& > .vaani-foundation-container': {
       maxWidth: '1400px',
@@ -221,12 +223,9 @@ const styles = {
 };
 
 const MissionVision = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   return (
     <Box>
-      <Box sx={styles.heroSection(isMobile)}>
+      <Box sx={styles.heroSection}>
         <video 
           autoPlay 
           loop 
@@ -241,7 +240,7 @@ const MissionVision = () => {
 {/*Vaani Foundation */}
       <Box sx={styles.section}>
         <Box className="vaani-foundation-container" sx={styles.vaaniFoundationContainer}>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600 uppercase">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
             VAANI FOUNDATION MISSION AND VISION
           </h2>
           <div className="space-y-6">

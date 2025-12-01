@@ -20,7 +20,7 @@ export function Navbar() {
         { name: 'Careers', href: '#' }
       ]
     },
-    { name: 'Services', href: '#' },
+    { name: 'What we do', href: '#' },
     { name: 'Contact Us', href: '#' },
     { name: 'Blog', href: '#' }
   ]

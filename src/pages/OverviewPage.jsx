@@ -49,23 +49,12 @@ const OverviewPage = () => {
       </header>
       
       <main className="grow">
-        <div className="relative w-full" style={{ height: '70vh', minHeight: '600px' }}>
-          <div style={{ 
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            overflow: 'hidden'
-          }}>
+        <div className="relative w-full h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] mt-[120px]">
+          <div className="relative w-full h-full overflow-hidden">
             <img
               src={overviewImage}
               alt="Overview of Vaani Foundation"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                position: 'relative',
-                zIndex: 1
-              }}
+              className="absolute inset-0 w-full h-full object-cover object-left"
               onError={handleImageError}
               onLoad={(e) => {
                 console.log('Image loaded successfully:', {
@@ -83,7 +72,7 @@ const OverviewPage = () => {
         </div>
 
         {/* Story Section */}
-        <div className="w-full bg-white pt-8 pb-12">
+        <div className="w-full bg-white pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8">
           <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6 text-lg text-gray-700 text-justify pr-8">
@@ -124,10 +113,10 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="pt-8 pb-12 bg-white w-full">
+        <div className="pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8 bg-white w-full">
           <div className="w-full">
-            <div className="text-center mb-12 w-full px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-12 uppercase">OUR THEORY OF CHANGE</h2>
+            <div className="text-center w-full px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-3 sm:mb-4 md:mb-6 lg:mb-8 uppercase">OUR THEORY OF CHANGE</h2>
               <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed">
                 The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
@@ -275,9 +264,9 @@ const OurJourney = () => {
   ];
 
   return (
-    <section className="pt-8 pb-12 bg-white">
+    <section className="pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-700 uppercase">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-700 uppercase">
           OUR JOURNEY IN THE LAST THREE YEARS
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10 max-w-[1600px] mx-auto px-6">

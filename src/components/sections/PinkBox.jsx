@@ -8,9 +8,9 @@ function PinkBox() {
   };
 
   return (
-    <section className="w-full bg-sky-100 py-12">
+    <section className="w-full bg-sky-100 pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-12">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <h2 className="text-3xl font-bold text-sky-600 mb-8">
+        <h2 className="text-3xl font-bold text-sky-600 mb-3 sm:mb-4 md:mb-6 lg:mb-8">
           VAANI FOUNDATION - Hope in Action
         </h2>
         <div className="space-y-6 text-lg text-gray-700 mb-6 text-justify">

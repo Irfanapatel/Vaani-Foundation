@@ -84,7 +84,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
 
             {/* Right Column - Content */}
             <div className="w-full lg:w-1/2">
-              <h2 className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 ${data.textColor}`}>
+              <h2 className={`text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 ${data.textColor}`}>
                 {data.title}
               </h2>
               <p className={`text-base sm:text-lg mb-6 sm:mb-8 ${data.textColor.replace('text-', 'text-opacity-80 text-')}`}>

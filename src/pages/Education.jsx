@@ -1,4 +1,5 @@
 import heroImage from '../assets/education/herosection.png'
+import EducationTimeline from '../components/sections/EducationTimeline'
 
 function EducationHero() {
   return (
@@ -63,6 +64,9 @@ export default function Education() {
           Here are our key pillars of building a strong foundation for children
         </h2>
       </section>
+
+      {/* Education journey timeline */}
+      <EducationTimeline />
     </div>
   )
 }

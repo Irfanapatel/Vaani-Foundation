@@ -20,9 +20,9 @@ export default function Education() {
       <EducationHero />
 
       {/* Main education content section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-10 py-12 sm:py-16 md:py-20">
-        <p className="text-sm sm:text-base font-semibold tracking-[0.25em] text-gray-700 uppercase mb-3 text-center">
-        DONATE FOR EDUCATION: GIVE EVERY CHILD THE CHANCE TO LEARN AND RISE
+      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20">
+        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+          DONATE FOR EDUCATION: GIVE EVERY CHILD THE CHANCE TO LEARN AND RISE
         </p>
 
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
@@ -31,9 +31,9 @@ export default function Education() {
 
         <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
           <p>
-            Across many villages in India, thousands of children still struggle to access quality education due to poverty, lack of resources,
-            and limited learning opportunities. At VAANI Foundation, we believe that every child—regardless of their background—deserves the
-            chance to study, dream, and build a brighter future.
+            Across many villages in India, thousands of children still struggle to access quality education due to poverty, lack of resources
+            and limited learning opportunities. At Vaani Foundation, we believe that every child—regardless of their background—deserves the
+            chance to study, dream and build a brighter future.
           </p>
           <p>
             Through our education initiatives, we work to ensure that children receive the support they need at every stage of their learning
@@ -41,13 +41,13 @@ export default function Education() {
             building strong foundations that shape confident and capable learners.
           </p>
           <p>
-            We support children with school supplies, reading materials, digital learning tools, and academic guidance. Our programs also focus
-            on creating safe and encouraging environments where children can learn without fear, stay motivated, and complete their schooling
+            We support children with school supplies, reading materials, digital learning tools and academic guidance. Our programs also focus
+            on creating safe and encouraging environments where children can learn without fear, stay motivated and complete their schooling
             with confidence.
           </p>
           <p>
-            Over the years, VAANI Foundation has continued to introduce sustainable, community-driven education models that help bridge learning
-            gaps and expand access to quality education in underserved areas. By collaborating with schools, teachers, and parents, we ensure
+            Over the years, Vaani Foundation has continued to introduce sustainable, community-driven education models that help bridge learning
+            gaps and expand access to quality education in underserved areas. By collaborating with schools, teachers and parents, we ensure
             that no child is left behind.
           </p>
           <p>
@@ -58,7 +58,7 @@ export default function Education() {
       </section>
 
       {/* Pillars heading placeholder */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-10 pb-16 md:pb-20 text-center">
+      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20 text-center">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
           Here are our key pillars of building a strong foundation for children
         </h2>

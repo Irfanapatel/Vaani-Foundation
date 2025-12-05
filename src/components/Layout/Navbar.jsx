@@ -16,9 +16,6 @@ export function Navbar() {
         { name: 'Overview', href: '/about/overview' },
         { name: 'Mission & Vision', href: '/about/mission-vision' },
         { name: 'Our Team', href: '/about/our-team' },
-        { name: 'Our Partners', href: '#' },
-        { name: 'Financials', href: '#' },
-        { name: 'Careers', href: '#' }
       ]
     },
     { 
@@ -26,7 +23,7 @@ export function Navbar() {
       href: '/what-we-do',
       dropdown: [
         { name: 'Education & Learning', href: '/what-we-do/education' },
-        { name: 'Community Health Services', href: '#' },
+        { name: 'Community Health Services', href: '/what-we-do/healthservices'},
         { name: 'Environmental Sustainability', href: '#' },
         { name: 'Women Empowerment & Livelihoods', href: '#' },
         { name: 'Rural Livelihood Support', href: '#' },

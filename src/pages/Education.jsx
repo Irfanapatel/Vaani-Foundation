@@ -16,7 +16,6 @@ import book1 from '../assets/education/book1.png'
 import book2 from '../assets/education/book2.png'
 import book3 from '../assets/education/book3.png'
 import book4 from '../assets/education/book4.png'
-import environmentImg from '../assets/journey/environment.png'
 import nutritionImg from '../assets/education/nuitrition.jpg'
 
 function EducationHero() {
@@ -78,8 +77,8 @@ export default function Education() {
 
       {/* Education Pillars Timeline */}
       <section className="w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 md:pt-4 pb-8 md:pb-12 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Here are our key pillars of building a strong foundation for children
           </h2>
         </div>

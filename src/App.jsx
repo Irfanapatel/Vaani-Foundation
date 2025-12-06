@@ -10,6 +10,7 @@ import MissionVision from "./pages/MissionVision";
 import OurTeam from "./pages/OurTeam";
 import Education from "./pages/Education";
 import HealthServices from './pages/HealthServices';
+import WomanEmpowerment from './pages/WomanEmpowerment';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -31,6 +32,7 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
       <Routes>
         <Route path="/what-we-do/education" element={<Education />} />
         <Route path="/what-we-do/healthservices" element={<HealthServices />} />
+        <Route path="/what-we-do/womanempowerment" element={<WomanEmpowerment />} />
       </Routes>
     );
   }

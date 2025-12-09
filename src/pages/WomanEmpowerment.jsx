@@ -2,6 +2,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import heroImage from '../assets/woman-empowerment/herosection.jpeg';
 import { Timeline } from '../components/ui/timeline';
+import TrainingImg1 from '../assets/woman-empowerment/training1.jpeg';
+import TrainingImg2 from '../assets/woman-empowerment/training 2.jpeg';
+import TrainingImg3 from '../assets/woman-empowerment/training3.jpeg';
+import TrainingImg4 from  '../assets/woman-empowerment/training4.jpeg';
+import TrainingImg5 from '../assets/woman-empowerment/training5.jpeg';
+import TrainingImg6 from '../assets/woman-empowerment/training6.jpeg';
+import RakhiImg1 from '../assets/woman-empowerment/rakhi1.jpeg';
+import RakhiImg2 from '../assets/woman-empowerment/rakhi2.jpeg';
+import RakhiImg3 from '../assets/woman-empowerment/rakhi3.jpeg';
+import RakhiImg4 from '../assets/woman-empowerment/rakhi4.jpeg';
 
 function WomanEmpowermentHero() {
   return (
@@ -24,7 +34,7 @@ export default function WomanEmpowerment() {
       <WomanEmpowermentHero />
       
       {/* Main content section */}
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20">
+      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 md:pt-6 pb-4 sm:pb-6 md:pb-8">
         <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           WOMEN EMPOWERMENT: CREATING OPPORTUNITIES FOR GROWTH
         </p>
@@ -46,7 +56,7 @@ export default function WomanEmpowerment() {
       </section>
 
       {/* What We Do Section */}
-      <section className="w-full bg-gray-50 py-8 sm:py-10 md:py-12">
+      <section className="w-full bg-gray-50 pt-4 pb-8 sm:pt-6 sm:pb-10 md:pt-8 md:pb-12">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What We Do?</h2>
@@ -101,76 +111,127 @@ export default function WomanEmpowerment() {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Our Women Empowerment Initiatives
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Empowering women through skill development, financial independence, and health awareness programs
-          </p>
         </div>
         <Timeline
           data={[
-            {
-              title: "Tailoring & Handicraft Training",
-              content: (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[1, 2, 3, 4].map((num) => (
-                      <div
-                        key={num}
-                        className="relative overflow-hidden rounded-xl shadow-lg group h-48"
-                      >
-                        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                          <span className="text-gray-400">Tailoring Training {num}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-gray-700">
-                    Our tailoring and handicraft training program equips women with professional skills in garment making, embroidery, and traditional crafts. Over 200 women have graduated from this program, with many starting their own small businesses or finding employment in the textile industry.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="font-semibold text-blue-600">500+</p>
-                      <p className="text-sm text-gray-600">Women Trained</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-blue-600">85%</p>
-                      <p className="text-sm text-gray-600">Employment Rate</p>
-                    </div>
-                  </div>
-                </div>
-              ),
-            },
-            {
-              title: "Financial Literacy & Microfinance",
-              content: (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[1, 2, 3, 4].map((num) => (
-                      <div
-                        key={num}
-                        className="relative overflow-hidden rounded-xl shadow-lg group h-48"
-                      >
-                        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                          <span className="text-gray-400">Finance Workshop {num}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-gray-700">
-                    Our financial literacy program teaches women essential money management skills, including savings, budgeting, and accessing microfinance options. We've helped establish over 50 self-help groups where women collectively save and support each other's entrepreneurial ventures.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="font-semibold text-blue-600">1,200+</p>
-                      <p className="text-sm text-gray-600">Women Empowered</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-blue-600">₹25L+</p>
-                      <p className="text-sm text-gray-600">In Micro-loans Disbursed</p>
-                    </div>
-                  </div>
-                </div>
-              ),
-            },
+             {
+                          title: "Women Livelihood Development Program",
+                          content: (
+                            <div className="space-y-6">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {[TrainingImg1, TrainingImg2, TrainingImg3, TrainingImg4, TrainingImg5, TrainingImg6].map((img, idx) => (
+                                  <div key={idx} className="relative overflow-hidden rounded-xl shadow-lg group">
+                                    <img
+                                      src={img}
+                                      alt={`Sweater distribution ${idx + 1}`}
+                                      className="w-full h-48 sm:h-56 object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/1 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="space-y-4">
+                                <p className="text-gray-700 leading-relaxed">
+                                These livelihood training initiatives were implemented with the support of DRDA Bharuch under its rural development program.
+                                </p>
+                                <h4 className="text-xl md:text-1xl font-bold text-gray-900">Tailoring & Handicraft Training</h4>
+                                <p className="text-gray-700 leading-relaxed">
+                                This training equips women with essential skills in stitching, embroidery, and basic garment making. Many participants have used these skills to start home‑based tailoring work or secure employment in local units, helping them achieve financial independence.
+                                </p>
+                                <h4 className="text-xl md:text-1xl font-bold text-gray-900">CRP Agriculture & Livestock Training</h4>
+                                <p className="text-gray-700 leading-relaxed">
+                                Women were trained as Community Resource Persons (CRPs) to support farming and livestock practices in their communities. The sessions covered improved agriculture techniques, animal care, and field demonstrations, enabling women to guide and assist other households in their villages.
+                                </p>
+                                <h4 className="text-xl md:text-1xl font-bold text-gray-900">VPRP Capacity Building</h4>
+                                <p className="text-gray-700 leading-relaxed">
+                               Women leaders received training to prepare and present Village Poverty Reduction Plans (VPRP). The program strengthened their abilities in planning, facilitation, and community engagement, encouraging them to take active roles in local governance and development processes.
+                               </p>
+                                <h4 className="text-xl md:text-1xl font-bold text-gray-900">Producer Group (PG) Training</h4>
+                                <p className="text-gray-700 leading-relaxed">
+                                This training supported women involved in producer groups by enhancing their skills in business planning, marketing, and collective enterprise. The program helps women work together, access better markets, and increase their income through organized group activities.
+                                </p>
+                              </div>
+                            </div>
+                          ),
+                        },
+           {
+                         title: "Rakhi Mela: Celebrating Women’s Entrepreneurship",
+                         content: (
+                           <div className="space-y-6">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                               {[RakhiImg1, RakhiImg2, RakhiImg3, RakhiImg4].map((img, idx) => (
+                                 <div key={idx} className="relative overflow-hidden rounded-xl shadow-lg group">
+                                   <div className="aspect-[3/4] w-full bg-white p-2">
+                                     <img
+                                       src={img}
+                                       alt={`Book distribution ${idx + 1}`}
+                                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                     />
+                                   </div>
+                                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                 </div>
+                               ))}
+                             </div>
+                             <div className="space-y-4">
+                               <h4 className="text-xl md:text-2xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Festival Stall Support</h4>
+                               <p className="text-gray-700 leading-relaxed">
+                                 Organized a Rakhi Mela in collaboration with the District Rural Development Agency (DRDA) to provide women with a dedicated platform to showcase and sell their handmade rakhis.
+                                 </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                 Supported women in setting up well-arranged stalls, ensuring they had the space, facilities, and visibility needed to attract customers.
+                                 </p>
+                                 <p className='text-gray-700 leading-relaxed'>
+                                 Enabled women’s groups and self-help groups (SHGs) to directly engage with buyers, helping them earn independently and gain confidence in their entrepreneurial abilities.
+                                 </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                   Contributed to strengthening livelihood opportunities for rural women by connecting their skills to real market demand and generating sustainable income during the festive season.
+                                   </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                  Reinforced our commitment to promoting women’s economic independence and helping them build brighter, self-reliant futures.
+                                  </p>
+                             </div>
+                           </div>
+                         ),
+                       },
+                       {
+                         title: "Rakhi Mela: Celebrating Women’s Entrepreneurship",
+                         content: (
+                           <div className="space-y-6">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                               {[RakhiImg1, RakhiImg2, RakhiImg3, RakhiImg4].map((img, idx) => (
+                                 <div key={idx} className="relative overflow-hidden rounded-xl shadow-lg group">
+                                   <div className="aspect-[3/4] w-full bg-white p-2">
+                                     <img
+                                       src={img}
+                                       alt={`Book distribution ${idx + 1}`}
+                                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                     />
+                                   </div>
+                                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                 </div>
+                               ))}
+                             </div>
+                             <div className="space-y-4">
+                               <h4 className="text-xl md:text-2xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Festival Stall Support</h4>
+                               <p className="text-gray-700 leading-relaxed">
+                                 Organized a Rakhi Mela in collaboration with the District Rural Development Agency (DRDA) to provide women with a dedicated platform to showcase and sell their handmade rakhis.
+                                 </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                 Supported women in setting up well-arranged stalls, ensuring they had the space, facilities, and visibility needed to attract customers.
+                                 </p>
+                                 <p className='text-gray-700 leading-relaxed'>
+                                 Enabled women’s groups and self-help groups (SHGs) to directly engage with buyers, helping them earn independently and gain confidence in their entrepreneurial abilities.
+                                 </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                   Contributed to strengthening livelihood opportunities for rural women by connecting their skills to real market demand and generating sustainable income during the festive season.
+                                   </p>
+                                 <p className="text-gray-700 leading-relaxed">
+                                  Reinforced our commitment to promoting women’s economic independence and helping them build brighter, self-reliant futures.
+                                  </p>
+                             </div>
+                           </div>
+                         ),
+                       },
           ]}
         />
       </section>

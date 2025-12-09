@@ -25,8 +25,7 @@ export function Navbar() {
         { name: 'Education & Learning', href: '/what-we-do/education' },
         { name: 'Community Health Services', href: '/what-we-do/healthservices'},
         { name: 'Women Empowerment & Livelihoods', href: '/what-we-do/womanempowerment'},
-        { name: 'Rural Livelihood Support', href: '#' },
-        { name: 'Environmental Sustainability', href: '#' },
+        { name: 'Environmental Sustainability', href: '/what-we-do/environment'},
         { name: 'Youth Engagement Programs', href: '#' },
       ]
     },

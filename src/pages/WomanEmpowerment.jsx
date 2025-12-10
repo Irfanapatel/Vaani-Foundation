@@ -12,6 +12,10 @@ import RakhiImg1 from '../assets/woman-empowerment/rakhi1.jpeg';
 import RakhiImg2 from '../assets/woman-empowerment/rakhi2.jpeg';
 import RakhiImg3 from '../assets/woman-empowerment/rakhi3.jpeg';
 import RakhiImg4 from '../assets/woman-empowerment/rakhi4.jpeg';
+import KitImg1 from '../assets/woman-empowerment/kit1.jpeg';
+import KitImg2 from '../assets/woman-empowerment/kit2.jpeg';
+import KitImg3 from '../assets/woman-empowerment/kit3.jpeg';
+import KitImg4 from '../assets/woman-empowerment/kit4.jpeg';
 
 function WomanEmpowermentHero() {
   return (
@@ -161,13 +165,11 @@ export default function WomanEmpowerment() {
                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                {[RakhiImg1, RakhiImg2, RakhiImg3, RakhiImg4].map((img, idx) => (
                                  <div key={idx} className="relative overflow-hidden rounded-xl shadow-lg group">
-                                   <div className="aspect-[3/4] w-full bg-white p-2">
-                                     <img
-                                       src={img}
-                                       alt={`Book distribution ${idx + 1}`}
-                                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                                     />
-                                   </div>
+                                   <img
+                                     src={img}
+                                     alt={`Rakhi Mela ${idx + 1}`}
+                                     className="w-full h-auto max-h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                                   />
                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                  </div>
                                ))}
@@ -194,40 +196,33 @@ export default function WomanEmpowerment() {
                          ),
                        },
                        {
-                         title: "Rakhi Mela: Celebrating Women’s Entrepreneurship",
+                         title: "Seed Kit Distribution for Farmer Support",
                          content: (
                            <div className="space-y-6">
                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                               {[RakhiImg1, RakhiImg2, RakhiImg3, RakhiImg4].map((img, idx) => (
+                               {[KitImg1, KitImg2, KitImg3, KitImg4].map((img, idx) => (
                                  <div key={idx} className="relative overflow-hidden rounded-xl shadow-lg group">
-                                   <div className="aspect-[3/4] w-full bg-white p-2">
-                                     <img
-                                       src={img}
-                                       alt={`Book distribution ${idx + 1}`}
-                                       className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                                     />
-                                   </div>
+                                   <img
+                                     src={img}
+                                     alt={`Seed kit distribution ${idx + 1}`}
+                                     className="w-full h-auto max-h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+                                   />
                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                  </div>
                                ))}
                              </div>
                              <div className="space-y-4">
-                               <h4 className="text-xl md:text-2xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Festival Stall Support</h4>
+                               <h4 className="text-xl md:text-2xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Agricultural Input Support</h4>
                                <p className="text-gray-700 leading-relaxed">
-                                 Organized a Rakhi Mela in collaboration with the District Rural Development Agency (DRDA) to provide women with a dedicated platform to showcase and sell their handmade rakhis.
+                                 To strengthen rural livelihoods and support small-scale farmers, Vaani Foundation distributed Biyaran Kits to farmers in Netrang village. This initiative aimed to equip farmers with essential inputs needed for healthy crop production and improved agricultural outcomes.
                                  </p>
                                  <p className="text-gray-700 leading-relaxed">
-                                 Supported women in setting up well-arranged stalls, ensuring they had the space, facilities, and visibility needed to attract customers.
-                                 </p>
+                                 The kit included high-quality seeds suitable for local soil and climate conditions, helping farmers reduce input costs and begin the farming season with confidence.
+Through this support, farmers were encouraged to adopt better cultivation practices, enhance productivity, and secure more stable income throughout the agricultural cycle.
+</p>
                                  <p className='text-gray-700 leading-relaxed'>
-                                 Enabled women’s groups and self-help groups (SHGs) to directly engage with buyers, helping them earn independently and gain confidence in their entrepreneurial abilities.
+                                 This initiative also contributed to promoting sustainable farming methods in rural communities, empowering farmers to become more resilient, self-reliant, and economically strengthened.
                                  </p>
-                                 <p className="text-gray-700 leading-relaxed">
-                                   Contributed to strengthening livelihood opportunities for rural women by connecting their skills to real market demand and generating sustainable income during the festive season.
-                                   </p>
-                                 <p className="text-gray-700 leading-relaxed">
-                                  Reinforced our commitment to promoting women’s economic independence and helping them build brighter, self-reliant futures.
-                                  </p>
                              </div>
                            </div>
                          ),

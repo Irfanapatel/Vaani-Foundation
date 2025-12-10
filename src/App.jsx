@@ -12,6 +12,7 @@ import Education from "./pages/Education";
 import HealthServices from './pages/HealthServices';
 import WomanEmpowerment from './pages/WomanEmpowerment';
 import Environment from './pages/Environment';
+import Youth from './pages/Youth';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -35,7 +36,8 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
         <Route path="/what-we-do/healthservices" element={<HealthServices />} />
         <Route path="/what-we-do/womanempowerment" element={<WomanEmpowerment />} />
         <Route path="/what-we-do/environment" element={<Environment />} />
-      </Routes>
+        <Route path="/what-we-do/youth" element={<Youth />} />
++      </Routes>
     );
   }
   

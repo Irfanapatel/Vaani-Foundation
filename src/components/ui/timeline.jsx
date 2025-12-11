@@ -3,7 +3,8 @@ import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({
-  data
+  data,
+  title = "Our Initiatives" // Default title if none provided
 }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
@@ -26,9 +27,15 @@ export const Timeline = ({
 
   return (
     <div
-      className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:bg-neutral-950 font-sans md:px-10 py-12 md:py-16"
+      className="w-full bg-sky-50 dark:bg-sky-900/20 font-sans md:px-10 py-12 md:py-16"
       ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {title}
+          </h2>
+          <div className="w-24 h-1 bg-blue-600 dark:bg-blue-500 mx-auto"></div>
+        </div>
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-4 md:pt-16 md:gap-6 group">
             <div

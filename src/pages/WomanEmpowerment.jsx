@@ -111,12 +111,8 @@ export default function WomanEmpowerment() {
 
       {/* Women Empowerment Projects Timeline */}
       <section className="w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 md:pt-4 pb-8 md:pb-12 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Our Women Empowerment Initiatives
-          </h2>
-        </div>
         <Timeline
+        title=' Our Women Empowerment Initiatives'
           data={[
              {
                           title: "Women Livelihood Development Program",

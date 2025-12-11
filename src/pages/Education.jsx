@@ -77,12 +77,8 @@ export default function Education() {
 
       {/* Education Pillars Timeline */}
       <section className="w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 md:pt-4 pb-8 md:pb-12 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            Here are our key pillars of building a strong foundation for children
-          </h2>
-        </div>
         <Timeline
+        title='Here are our key pillars of building a strong foundation for children'
           data={[
             {
               title: "TV Installation in Anganwadis",

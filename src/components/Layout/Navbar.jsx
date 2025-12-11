@@ -26,7 +26,7 @@ export function Navbar() {
         { name: 'Community Health Services', href: '/what-we-do/healthservices'},
         { name: 'Women Empowerment & Livelihoods', href: '/what-we-do/womanempowerment'},
         { name: 'Environmental Sustainability', href: '/what-we-do/environment'},
-        { name: 'Youth Engagement Programs', href: '/what-we-do/youth'},
+        { name: 'Social Welfare & Community Support', href: '/what-we-do/youth'},
       ]
     },
     { name: 'Contact Us', href: '#' },

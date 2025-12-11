@@ -56,12 +56,8 @@ export default function HealthServices() {
 
       {/* Project Timeline Section */}
       <section className="w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Our Holistic Approach to Community Health
-          </h2>
-        </div>
         <Timeline
+        title='Our Holistic Approach to Community Health'
           data={[
             {
               title: "Essential Medical Support & Care Initiative",

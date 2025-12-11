@@ -16,10 +16,6 @@ function EnvironmentHero() {
           alt="Environment conservation"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute bottom-8 left-8 text-white">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Planting Hope, Growing Futures</h1>
-          <p className="text-lg sm:text-xl">Join us in our mission to create a greener tomorrow</p>
-        </div>
       </div>
     </section>
   )
@@ -109,12 +105,8 @@ export default function Environment() {
       </section>
       {/* Project Timeline Section */}
             <section className="w-full bg-white">
-              <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                  Our Key Environmental Initiatives
-                </h2>
-              </div>
               <Timeline
+              title='Our Key Environmental Initiatives'
                 data={[
                   {
                     title: "Enhancing Green Cover Through Community Tree Plantation",

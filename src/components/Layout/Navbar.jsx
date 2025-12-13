@@ -29,7 +29,7 @@ export function Navbar() {
         { name: 'Social Welfare & Community Support', href: '/what-we-do/youth'},
       ]
     },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Contact Us', href: '/contact' },
     { name: 'Blog', href: '#' }
   ]
 

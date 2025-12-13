@@ -13,6 +13,7 @@ import HealthServices from './pages/HealthServices';
 import WomanEmpowerment from './pages/WomanEmpowerment';
 import Environment from './pages/Environment';
 import Youth from './pages/Youth';
+import Contactus from './pages/Contactus';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -37,8 +38,13 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
         <Route path="/what-we-do/womanempowerment" element={<WomanEmpowerment />} />
         <Route path="/what-we-do/environment" element={<Environment />} />
         <Route path="/what-we-do/youth" element={<Youth />} />
-+      </Routes>
+      </Routes>
     );
+  }
+
+  // Handle contact page
+  if (location.pathname === '/contact') {
+    return <Contactus />;
   }
   
   // Otherwise, show the home page

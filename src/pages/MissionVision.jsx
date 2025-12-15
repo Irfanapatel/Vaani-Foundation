@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { HeartHandshake, Sparkles, Users } from 'lucide-react';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import missionVideo from '../assets/mission.mp4';
 import missionImage from '../assets/images.jpg';
 import childrenPic from '../assets/Children-pic.jpg';
@@ -237,7 +238,11 @@ const MissionVision = () => {
           Your browser does not support the video tag.
         </video>
       </Box>
-{/*Vaani Foundation */}
+      
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
+      
+      {/*Vaani Foundation */}
       <Box sx={styles.section}>
         <Box className="vaani-foundation-container" sx={styles.vaaniFoundationContainer}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">

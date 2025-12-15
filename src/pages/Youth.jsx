@@ -1,6 +1,7 @@
 import heroImage from '../assets/youth/herosection.jpeg';
 import { useEffect, useState } from 'react';
 import { Timeline } from '../components/ui/timeline';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import FoodImg1 from '../assets/youth/food1.jpeg';
 import FoodImg2 from '../assets/youth/food2.jpeg';
 import FoodImg3 from '../assets/youth/food3.jpeg';
@@ -69,10 +70,13 @@ const Youth = () => {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <YouthHero />
       
-      {/* Main health services content section */}
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
+
+      {/* Main content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12">
         <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           LET US BUILD A STRONGER, MORE CARING COMMUNITY, TOGETHER

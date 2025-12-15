@@ -14,6 +14,8 @@ import WomanEmpowerment from './pages/WomanEmpowerment';
 import Environment from './pages/Environment';
 import Youth from './pages/Youth';
 import Contactus from './pages/Contactus';
+import Volunteer from './pages/Volunteer';
+import WaysToHelp from './pages/WaysToHelp';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -42,10 +44,15 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
     );
   }
 
-  // Handle contact page
-  if (location.pathname === '/contact') {
-    return <Contactus />;
-  }
+  if (location.pathname.startsWith('/get-involved/')) {
+  return (
+    <Routes>
+      <Route path="/get-involved/Volunteer" element={<Volunteer />} />
+      <Route path="/get-involved/contactus" element={<Contactus />} />
+      <Route path="/get-involved/waystohelp" element={<WaysToHelp />} />
+    </Routes>
+  )
+}
   
   // Otherwise, show the home page
   return (

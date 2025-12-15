@@ -1,5 +1,6 @@
 import heroImage from '../assets/health/herosection.jpg';
 import { Timeline } from '../components/ui/timeline';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import healthCamp1 from '../assets/health/health-camp1.png';
 import healthCamp2 from '../assets/health/health-camp2.png';
 import healthCamp3 from '../assets/health/health-camp3.png';
@@ -29,6 +30,9 @@ export default function HealthServices() {
     <div className="bg-white min-h-screen">
       <HealthHero />
       
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
+
       {/* Main health services content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12">
         <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">

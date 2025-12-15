@@ -17,6 +17,7 @@ import book2 from '../assets/education/book2.png'
 import book3 from '../assets/education/book3.png'
 import book4 from '../assets/education/book4.png'
 import nutritionImg from '../assets/education/nuitrition.jpg'
+import { Breadcrumbs } from '../components/ui/Breadcrumbs'
 
 function EducationHero() {
   return (
@@ -36,6 +37,9 @@ export default function Education() {
   return (
     <div className="bg-white min-h-screen">
       <EducationHero />
+      
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
 
       {/* Main education content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20">

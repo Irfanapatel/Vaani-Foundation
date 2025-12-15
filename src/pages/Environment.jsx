@@ -1,6 +1,7 @@
 import heroImage from '../assets/environment/herosection.png';
 import { useEffect, useState } from 'react';
 import { Timeline } from '../components/ui/timeline';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import PlaneImg1 from '../assets/environment/planatation1.jpeg';
 import PlaneImng2 from '../assets/environment/planatation2.jpeg';
 import PlaneImg3 from '../assets/environment/planatation3.jpeg';
@@ -57,6 +58,9 @@ export default function Environment() {
     <div className="bg-white min-h-screen">
       <EnvironmentHero />
       
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
+
       {/* Main environment content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12">
         <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">

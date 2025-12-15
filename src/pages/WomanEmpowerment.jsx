@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import heroImage from '../assets/woman-empowerment/herosection.jpeg';
 import { Timeline } from '../components/ui/timeline';
 import TrainingImg1 from '../assets/woman-empowerment/training1.jpeg';
@@ -37,6 +38,9 @@ export default function WomanEmpowerment() {
     <div className="bg-white min-h-screen">
       <WomanEmpowermentHero />
       
+      {/* Breadcrumbs below hero section */}
+      <Breadcrumbs />
+
       {/* Main content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 md:pt-6 pb-4 sm:pb-6 md:pb-8">
         <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">

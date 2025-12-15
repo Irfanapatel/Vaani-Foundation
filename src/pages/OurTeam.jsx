@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import maheshImage from '../assets/Our team/Maheshsir.jpg';
 import userImage from '../assets/Our team/user.png';
 import jagdishImage from '../assets/Our team/Jagdishsir.jpeg';
@@ -173,10 +174,13 @@ const BodyText = styled(Typography)({
 const OurTeam = () => {
   return (
     <PageContainer>
+      <Box sx={{ pt: '60px' }}>
+        <Breadcrumbs />
+      </Box>
       <Container
         maxWidth={false}
         sx={{
-          py: 8,
+          py: 4,
           px: { xs: 1, sm: 2, md: 3 },
           width: '100%',
         }}

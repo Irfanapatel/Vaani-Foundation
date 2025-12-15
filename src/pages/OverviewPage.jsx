@@ -11,6 +11,7 @@ import cricketImage from "../assets/journey/cricket.png";
 import solarImage from "../assets/journey/solar.png";
 import trainingImage from "../assets/journey/training.jpg";
 import { Globe, Handshake, Users, Lightbulb, SearchCheck, Leaf } from "lucide-react";
+import { Breadcrumbs } from "../components/ui/Breadcrumbs";
 
 // Log the image import
 console.log('Image import result:', {
@@ -70,6 +71,9 @@ const OverviewPage = () => {
           <div className="absolute inset-0 flex items-center justify-center z-20">
           </div>
         </div>
+        
+        {/* Breadcrumbs below hero section */}
+        <Breadcrumbs />
 
         {/* Story Section */}
         <div className="w-full bg-white pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8">

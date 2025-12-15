@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import logo from '../../assets/vaani foundation.png'
+import { href } from 'react-router-dom'
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -8,7 +9,6 @@ export function Navbar() {
   const [hoveredDropdown, setHoveredDropdown] = useState(null)
 
   const navItems = [
-    { name: 'Home', href: '/' },
     { 
       name: 'About Us', 
       href: '/about',
@@ -29,8 +29,15 @@ export function Navbar() {
         { name: 'Social Welfare & Community Support', href: '/what-we-do/youth'},
       ]
     },
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Blog', href: '#' }
+    { name: 'Get Involved',
+      href: '/get-involve',
+      dropdown: [
+        {name: 'Volunteer', href:'/get-involved/Volunteer'},
+        {name: 'Ways to help', href: '/get-involved/waystohelp'},
+        {name: 'Contact us', href: '/get-involved/contactus'},
+        
+      ]},
+    { name: 'Certificates', href: '#' }
   ]
 
   return (
@@ -97,9 +104,6 @@ export function Navbar() {
 
           {/* Right actions */}
           <div className="hidden md:flex items-center justify-end gap-4">
-            <a href="#" className="no-underline text-gray-700 hover:text-blue-700 text-sm md:text-base font-semibold">
-              Sign in
-            </a>
             <a
               href="#"
               className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
@@ -139,8 +143,7 @@ export function Navbar() {
                 {item.name}
               </a>
             ))}
-            <div className="flex items-center justify-between pt-2">
-              <a href="#" className="no-underline text-gray-700 hover:text-blue-700 text-base font-semibold">Sign in</a>
+            <div className="flex items-center justify-end pt-2">
               <a
                 href="#"
                 className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700"

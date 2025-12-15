@@ -2,8 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { HeartHandshake, Sparkles, Users } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-import missionVideo from '../assets/mission.mp4';
-import missionImage from '../assets/images.jpg';
+import missionImage from '../assets/missionvision.jpg';
 import childrenPic from '../assets/Children-pic.jpg';
 
 // Inline styles instead of styled components
@@ -227,16 +226,11 @@ const MissionVision = () => {
   return (
     <Box>
       <Box sx={styles.heroSection}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <img 
+          src={missionImage} 
+          alt="Mission and Vision"
           style={styles.heroGif}
-        >
-          <source src={missionVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
       </Box>
       
       {/* Breadcrumbs below hero section */}

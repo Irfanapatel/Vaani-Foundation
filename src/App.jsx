@@ -44,6 +44,10 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
     );
   }
 
+  if (location.pathname === '/contact') {
+    return <Contactus />;
+  }
+
   if (location.pathname.startsWith('/get-involved/')) {
   return (
     <Routes>

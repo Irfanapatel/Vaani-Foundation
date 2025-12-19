@@ -30,6 +30,7 @@ export default function Volunteer() {
     email: '',
     phone: '',
     address: '',
+    aboutYourself: '',
     interests: []
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -73,6 +74,7 @@ export default function Volunteer() {
           email: formData.email,
           phone: formData.phone,
           address: formData.address,
+          about_yourself: formData.aboutYourself,
           interests: formData.interests.join(', '),
           to_email: 'vaanifoundation2025@gmail.com'
         }
@@ -87,6 +89,7 @@ export default function Volunteer() {
         email: '',
         phone: '',
         address: '',
+        aboutYourself: '',
         interests: []
       });
       
@@ -245,6 +248,23 @@ export default function Volunteer() {
                 ></textarea>
               </div>
 
+              {/* About Yourself */}
+              <div>
+                <label htmlFor="aboutYourself" className="block text-sm font-medium text-gray-700 mb-1">
+                  About Yourself <span className="text-blue-600">*</span>
+                </label>
+                <textarea
+                  id="aboutYourself"
+                  name="aboutYourself"
+                  rows="4"
+                  value={formData.aboutYourself}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 block w-full px-4 py-3 border-2 border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-opacity-50 transition duration-150 ease-in-out"
+                  placeholder="Tell us about yourself, your skills, experience, and why you want to volunteer with us"
+                ></textarea>
+              </div>
+
               {/* Areas of Interest */}
               <div>
                 <p className="block text-sm font-medium text-gray-700 mb-2">
@@ -287,6 +307,9 @@ export default function Volunteer() {
                     </>
                   ) : 'Submit Application'}
                 </button>
+                <p className="mt-4 text-center text-gray-600 text-sm">
+                  Vaani Foundation team will reach out to you soon.
+                </p>
               </div>
             </form>
           </div>

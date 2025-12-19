@@ -105,7 +105,7 @@ export function Navbar() {
           {/* Right actions */}
           <div className="hidden md:flex items-center justify-end gap-4">
             <a
-              href="#"
+              href="/donate"
               className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
             >
               Donate Now
@@ -145,7 +145,7 @@ export function Navbar() {
             ))}
             <div className="flex items-center justify-end pt-2">
               <a
-                href="#"
+                href="/donate"
                 className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700"
               >
                 Donate Now

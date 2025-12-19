@@ -86,7 +86,7 @@ const WaysToHelp = () => {
       description: 'Become a changemaker by volunteering your time, skills, or expertise in fieldwork, awareness campaigns, training programs, or digital support.',
       icon: Users,
       ctaText: 'Join as Volunteer',
-      ctaLink: '/volunteer'
+      ctaLink: '/get-involved/Volunteer'
     },
     {
       title: 'SUPPORT A CAMPAIGN',
@@ -151,7 +151,7 @@ const WaysToHelp = () => {
                 Donate Now
               </a>
               <a 
-                href="/volunteer" 
+                href="/get-involved/Volunteer" 
                 className="px-8 py-3 bg-white text-blue-700 border-2 border-blue-200 rounded-lg hover:bg-blue-50 hover:scale-105 transform transition-all duration-300 font-medium text-base shadow-md hover:shadow-lg flex items-center"
               >
                 <Users className="w-4 h-4 mr-2" />

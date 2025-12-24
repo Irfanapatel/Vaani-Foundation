@@ -17,6 +17,7 @@ import Contactus from './pages/Contactus';
 import Volunteer from './pages/Volunteer';
 import WaysToHelp from './pages/WaysToHelp';
 import Donate from './pages/Donate';
+import Certificats from './pages/Certificats';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -43,6 +44,10 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
         <Route path="/what-we-do/youth" element={<Youth />} />
       </Routes>
     );
+  }
+
+  if (location.pathname === '/certificates') {
+    return <Certificats />;
   }
 
   if (location.pathname === '/contact') {

@@ -37,7 +37,7 @@ export function Navbar() {
         {name: 'Contact us', href: '/get-involved/contactus'},
         
       ]},
-    { name: 'Certificates', href: '#' }
+    { name: 'Certificates', href: '/certificates' }
   ]
 
   return (

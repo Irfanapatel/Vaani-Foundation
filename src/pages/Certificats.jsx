@@ -123,24 +123,63 @@ const Certificates = () => {
           Click on any report below to open it in a new tab for easy viewing, or choose to download the PDF directly to your device for offline access.
         </Typography>
 
-        <Grid container spacing={4} justifyContent="center" sx={{ maxWidth: '1400px', margin: '0 auto' }}>
-          {certificates.map((cert) => (
-            <Grid item key={cert.id} xs={12} sm={6} md={4} lg={4} sx={{
-              display: 'flex',
+        <Box sx={{ 
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          px: { xs: 2, sm: 3, md: 4 },
+        }}>
+          <Grid 
+            container 
+            spacing={3}
+            sx={{
+              maxWidth: '1200px',
+              margin: 0,
               justifyContent: 'center',
-              maxWidth: '400px',
-              width: '100%',
-              margin: '0 auto'
-            }}>
-              <CertificateCard
-                title={cert.title}
-                image={cert.image}
-                pdfPath={cert.pdfPath}
-                sx={{ width: '100%', height: '100%' }}
-              />
-            </Grid>
-          ))}
-        </Grid>
+              '& > .MuiGrid-item': {
+                padding: '12px',
+                '&:hover': {
+                  transform: 'translateY(-4px)',
+                  transition: 'transform 0.2s ease-in-out'
+                },
+                transition: 'transform 0.2s ease-in-out',
+              }
+            }}
+          >
+            {certificates.map((cert) => (
+              <Grid 
+                item 
+                key={cert.id} 
+                xs={12}
+                sm={6}
+                md={4}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  padding: '12px !important'
+                }}
+              >
+                <CertificateCard
+                  title={cert.title}
+                  image={cert.image}
+                  pdfPath={cert.pdfPath}
+                  sx={{ 
+                    width: '100%',
+                    height: '100%',
+                    maxWidth: '100%',
+                    boxShadow: 3,
+                    '&:hover': {
+                      boxShadow: 6
+                    },
+                    transition: 'box-shadow 0.3s ease-in-out',
+                    borderRadius: 2,
+                    overflow: 'hidden'
+                  }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Container>
     </PageContainer>
   );

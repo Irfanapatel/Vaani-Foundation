@@ -57,9 +57,9 @@ export function Navbar() {
 
       <nav className="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <a href="/" className="flex items-center gap-3 no-underline">
               <img src={logo} alt="Vaani Foundation" className="h-14 md:h-16 w-auto" />
               <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">Vaani Foundation</span>
@@ -113,7 +113,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center justify-end md:hidden">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"

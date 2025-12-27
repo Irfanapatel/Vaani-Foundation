@@ -5,6 +5,8 @@ import { Hero } from "./components/sections/Hero"
 import PinkBox from "./components/sections/PinkBox"
 import CometCard from "./components/ui/comet-card"
 import Projectsection from "./components/sections/Projectsection"
+import ImpactAtGlance from "./components/sections/ImpactAtGlance"
+import OurPartners from "./components/sections/OurPartners"
 import OverviewPage from "./pages/OverviewPage";
 import MissionVision from "./pages/MissionVision";
 import OurTeam from "./pages/OurTeam";
@@ -110,6 +112,8 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
         </div>
       </div>
       <Projectsection activeField={activeField} bgColor={fieldBgColors[activeField] || 'bg-gray-50'} />
+      <ImpactAtGlance />
+      <OurPartners />
     </>
   );
 };

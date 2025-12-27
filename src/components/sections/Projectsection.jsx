@@ -65,7 +65,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
   const imageSrc = imageMap[data.image] || `https://via.placeholder.com/800x600/F3F4F6/6B7280?text=${data.title}`;
 
   return (
-    <section className="py-8 md:py-12 lg:py-16">
+    <section className="pt-8 pb-6 md:pt-12 md:pb-8 lg:pt-14 lg:pb-10">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl p-4 sm:p-6 md:p-8" style={{ backgroundColor: data.bgColor }}>
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-center">

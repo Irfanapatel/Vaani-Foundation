@@ -134,19 +134,35 @@ export function Navbar() {
         <div className="md:hidden absolute top-[5rem] left-0 right-0 bg-white border-b border-gray-200 shadow-sm py-4 px-6">
           <div className="space-y-4">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block py-2 no-underline text-gray-800 hover:text-blue-700 text-base font-semibold transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
+              <div key={item.name} className="space-y-2">
+                <a
+                  href={item.href}
+                  className="block py-2 no-underline text-gray-800 hover:text-blue-700 text-base font-semibold transition-colors"
+                  onClick={() => !item.dropdown && setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+                {item.dropdown && (
+                  <div className="pl-4 space-y-2 mt-1">
+                    {item.dropdown.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block py-1.5 text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <div className="flex items-center justify-end pt-2">
               <a
                 href="/donate"
                 className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Donate Now
               </a>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from "./components/Layout/Navbar"
+import { Navbar } from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
 import { Hero } from "./components/sections/Hero"
 import PinkBox from "./components/sections/PinkBox"
 import CometCard from "./components/ui/comet-card"
@@ -20,6 +21,9 @@ import Volunteer from './pages/Volunteer';
 import WaysToHelp from './pages/WaysToHelp';
 import Donate from './pages/Donate';
 import Certificats from './pages/Certificats';
+
+// Import Footer CSS
+import './components/Layout/Footer.css';
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -144,13 +148,7 @@ function App() {
             fieldBgColors={fieldBgColors}
           />
         </main>
-        <footer className="bg-gray-100 py-4">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-gray-500 text-sm">
-              &copy; {new Date().getFullYear()} Vaani Foundation. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </Router>
   )

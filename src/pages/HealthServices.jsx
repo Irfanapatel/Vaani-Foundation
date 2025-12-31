@@ -1,4 +1,4 @@
-import heroImage from '../assets/health/herosection.jpg';
+import heroImage from '../assets/health/heroimage.jpg'
 import { Timeline } from '../components/ui/timeline';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import healthCamp1 from '../assets/health/health-camp1.png';
@@ -12,14 +12,13 @@ import nutrition4 from '../assets/health/nuitrition4.jpeg';
 
 function HealthHero() {
   return (
-    <section className="w-full flex justify-end overflow-hidden m-0 p-0 relative mt-[120px]">
-      <div className="relative h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] w-full">
+    <section className="w-full overflow-hidden m-0 p-0 mt-[120px]">
+      <div className="relative w-full h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh]">
         <img
           src={heroImage}
           alt="Healthcare services banner"
-          className="absolute inset-0 h-full w-full object-contain object-center bg-white"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
       </div>
     </section>
   );
@@ -47,7 +46,7 @@ export default function HealthServices() {
            </p>
 
              {/* Green Box Section */}
-          <div className="bg-sky-100 rounded-lg p-6 sm:p-8 md:p-10 my-8 sm:my-10 md:my-12 max-w-5xl mx-auto">
+          <div className="bg-sky-100 rounded-lg px-6 sm:px-8 md:px-10 py-4 sm:py-6 md:py-8 my-4 sm:my-6 md:my-8 max-w-5xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold text-center text-sky-600 mb-3 sm:mb-4">
               Our Thematic Goal
             </h3>

@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, Instagram, Facebook } from 'lucide-react'
 import logo from '../../assets/vaani foundation.png'
 import { href } from 'react-router-dom'
+import MovingBanner from '../ui/MovingBanner'
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -42,15 +43,31 @@ export function Navbar() {
 
   return (
     <div className="fixed w-full z-50">
-      {/* Top blue banner */}
-      <div className="bg-blue-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="h-10 flex items-center justify-end text-xs md:text-sm">
-            <div className="flex items-center gap-4">
-              <a href="tel:+910000000000" className="no-underline text-white/90 hover:text-white">+91 00000 00000</a>
-              <span className="hidden sm:inline">|</span>
-              <a href="mailto:info@vaanifoundation.org" className="no-underline text-white/90 hover:text-white">info@vaanifoundation.org</a>
+      {/* Top blue banner with moving text */}
+      <div className="bg-blue-700 text-white w-full h-10 flex items-center">
+        <div className="w-full h-full relative">
+          <div className="absolute right-0 top-0 bottom-0 flex items-center pr-4 pl-4 bg-blue-700 z-10">
+            <a href="tel:+91 88666 85088" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5">
+              <Phone className="h-3.5 w-3.5" strokeWidth={2.5} />
+              <span className="hidden sm:inline">+91 88666 85088</span>
+            </a>
+            <span className="mx-2 hidden sm:inline">|</span>
+            <a href="mailto:info@vaanifoundation.org" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5">
+              <Mail className="h-3.5 w-3.5" strokeWidth={2.5} />
+              <span className="hidden sm:inline">info@vaanifoundation.org</span>
+            </a>
+            <span className="mx-2 hidden sm:inline">|</span>
+            <div className="flex items-center gap-3 ml-1">
+              <a href="https://www.instagram.com/vaanifoundation" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white">
+                <Instagram className="h-4 w-4" strokeWidth={2.5} />
+              </a>
+              <a href="https://www.facebook.com/vaanifoundation" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white">
+                <Facebook className="h-4 w-4" strokeWidth={2.5} />
+              </a>
             </div>
+          </div>
+          <div className="absolute left-0 right-0 top-0 bottom-0 overflow-hidden">
+            <MovingBanner text="Vaani Foundation is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities. <a href='/certificates' className='text-yellow-300 hover:text-yellow-200 font-medium underline'>click here</a> to visit all certificates" />
           </div>
         </div>
       </div>

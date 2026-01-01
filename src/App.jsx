@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
@@ -24,6 +24,17 @@ import Certificats from './pages/Certificats';
 
 // Import Footer CSS
 import './components/Layout/Footer.css';
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 // Wrapper component to handle routing
 const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
@@ -136,17 +147,20 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white">
-        <header>
+      <div className="min-h-screen flex flex-col bg-white w-full overflow-x-hidden">
+        <ScrollToTop />
+        <header className="w-full">
           <Navbar />
         </header>
-        <main className="grow">
-          <AppRoutes 
-            activeField={activeField}
-            setActiveField={setActiveField}
-            fields={fields}
-            fieldBgColors={fieldBgColors}
-          />
+        <main className="flex-grow w-full">
+          <div className="w-full max-w-full">
+            <AppRoutes 
+              activeField={activeField}
+              setActiveField={setActiveField}
+              fields={fields}
+              fieldBgColors={fieldBgColors}
+            />
+          </div>
         </main>
         <Footer />
       </div>

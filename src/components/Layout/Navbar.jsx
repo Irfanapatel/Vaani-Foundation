@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, ChevronDown, Phone, Mail, Instagram, Facebook } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react'
 import logo from '../../assets/vaani foundation.png'
 import { href } from 'react-router-dom'
 import MovingBanner from '../ui/MovingBanner'
@@ -56,15 +56,6 @@ export function Navbar() {
               <Mail className="h-3.5 w-3.5" strokeWidth={2.5} />
               <span className="hidden sm:inline">info@vaanifoundation.org</span>
             </a>
-            <span className="mx-2 hidden sm:inline">|</span>
-            <div className="flex items-center gap-3 ml-1">
-              <a href="https://www.instagram.com/vaanifoundation" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white">
-                <Instagram className="h-4 w-4" strokeWidth={2.5} />
-              </a>
-              <a href="https://www.facebook.com/vaanifoundation" target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-white">
-                <Facebook className="h-4 w-4" strokeWidth={2.5} />
-              </a>
-            </div>
           </div>
           <div className="absolute left-0 right-0 top-0 bottom-0 overflow-hidden">
             <MovingBanner text="Vaani Foundation is registered under sections 12A & 80G of the Income Tax Act, 1961 and CSR-1 registered under the Ministry of Corporate Affairs for undertaking CSR activities. <a href='/certificates' className='text-yellow-300 hover:text-yellow-200 font-medium underline'>click here</a> to visit all certificates" />
@@ -95,19 +86,25 @@ export function Navbar() {
                 >
                   <a
                     href={item.href}
-                    className="no-underline text-gray-800 hover:text-blue-700 text-sm md:text-base font-semibold transition-colors whitespace-nowrap flex items-center gap-1 py-2 px-1"
+                    onClick={(e) => {
+                      if (item.dropdown) {
+                        e.preventDefault();
+                        setHoveredDropdown(hoveredDropdown === item.name ? null : item.name);
+                      }
+                    }}
+                    className="no-underline text-gray-800 hover:text-blue-700 text-sm md:text-base font-semibold transition-colors whitespace-nowrap flex items-center gap-1 py-2 px-1 cursor-pointer"
                   >
                     {item.name}
-                    {item.dropdown && <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />}
+                    {item.dropdown && <ChevronDown size={16} className={`transition-transform duration-200 ${hoveredDropdown === item.name ? 'rotate-180' : ''}`} />}
                   </a>
                   
                     {item.dropdown && hoveredDropdown === item.name && (
-                    <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md py-2 z-50">
+                    <div className="absolute left-0 mt-0 w-56 bg-blue-100 shadow-lg rounded-md py-2 z-50 border border-blue-200">
                       {item.dropdown.map((subItem) => (
                         <a
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-sm text-gray-800 hover:bg-blue-200 transition-colors duration-150"
                         >
                           {subItem.name}
                         </a>
@@ -155,17 +152,25 @@ export function Navbar() {
                 <a
                   href={item.href}
                   className="block py-2 no-underline text-gray-800 hover:text-blue-700 text-base font-semibold transition-colors"
-                  onClick={() => !item.dropdown && setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    if (item.dropdown) {
+                      e.preventDefault();
+                      // Toggle dropdown in mobile view
+                      setHoveredDropdown(hoveredDropdown === item.name ? null : item.name);
+                    } else {
+                      setIsMenuOpen(false);
+                    }
+                  }}
                 >
                   {item.name}
                 </a>
                 {item.dropdown && (
-                  <div className="pl-4 space-y-2 mt-1">
+                  <div className="pl-4 space-y-2 mt-1 bg-blue-100 rounded-md p-2">
                     {item.dropdown.map((subItem) => (
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="block py-1.5 text-gray-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                        className="block py-1.5 px-2 rounded text-gray-700 hover:bg-blue-200 hover:text-blue-800 text-sm font-medium transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}

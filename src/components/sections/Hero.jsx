@@ -35,11 +35,11 @@ export function Hero() {
 
   return (
     <section 
-      className="w-full flex justify-end overflow-hidden m-0 p-0 relative group mt-[120px]"
+      className="w-full relative group mt-[120px] max-w-full overflow-x-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] w-full">
+      <div className="relative h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] w-full max-w-full">
         {heroImages.map((image, index) => (
           <img
             key={index}

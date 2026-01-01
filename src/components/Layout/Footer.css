@@ -2,14 +2,58 @@
   background: #1a3d6d; /* Lighter blue for better visibility */
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
+  padding: 40px 0 0 0;
+}
+
+/* Logo Section */
+.logo-section {
+  padding-right: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  margin: 0 0 15px 0;
+}
+
+.footer-logo-img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin: -15px 10px 0 0; /* Move only the image up */
+}
+
+.logo-text h2 {
+  color: #ffffff;
+  font-size: 1.4rem; /* Increased from 1.1rem */
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+  font-weight: 700; /* Slightly bolder */
+  letter-spacing: 0.5px; /* Slightly more spacing */
+}
+
+.logo-text p {
+  color: #ffdd57;
+  font-size: 0.7rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.about-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .vf-footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 0 20px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
   gap: 30px;
 }
 

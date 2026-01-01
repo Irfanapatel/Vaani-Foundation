@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Import images directly
 import educationImg from '../../assets/projectsection/EDUCATION.JPG';
@@ -25,7 +26,8 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       description: "At Vaani Foundation, we believe that education is the bridge to equality and empowerment. Our initiatives aim to remove barriers for rural and underprivileged children through uniform and book distribution drives, digital learning installations in Anganwadis, and school infrastructure enhancement. By combining compassion with innovation, we create opportunities for every child to learn with dignity, confidence, and curiosity. Each effort strengthens the foundation of an educated, self-reliant generation that will lead tomorrow's change.",
       bgColor: "#E3F2FD", // Light blue
       textColor: "text-blue-900",
-      buttonColor: "bg-blue-700 hover:bg-blue-800"
+      buttonColor: "bg-blue-700 hover:bg-blue-800",
+      pageLink: "/what-we-do/education"
     },
     HEALTH: {
       image: "HEALTH.PNG",
@@ -33,7 +35,8 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       description: "Health is the true wealth of a community. Through our Smart PHC program, health awareness campaigns, and medical resource support, we work to make healthcare accessible, affordable, and compassionate in rural Gujarat. Our interventions extend from equipping health centers with modern facilities to conducting community check-ups and emergency assistance. During the COVID-19 pandemic, our foundation stood with families in distress by distributing food, hygiene kits, and safety essentials, ensuring that no one was left behind.",
       bgColor: "#CAF0F8", // Very light blue
       textColor: "text-cyan-800",
-      buttonColor: "bg-cyan-700 hover:bg-cyan-800"
+      buttonColor: "bg-cyan-700 hover:bg-cyan-800",
+      pageLink: "/what-we-do/healthservices"
     },
     ENVIRONMENT: {
       image: "ENVIRONMENT.PNG",
@@ -41,7 +44,8 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       description: "Sustainability lies at the heart of everything we do. Vaani Foundation's environmental efforts focus on rainwater harvesting, solar energy promotion, and tree plantation drives that help restore the ecological balance. Our Catch the Rain and Green Future programs have revitalized groundwater levels, created green corridors, and educated communities on climate resilience. Each tree we plant, each drop we conserve, and each solar light we install is a step toward a cleaner, greener, and healthier planet.",
       bgColor: "#C7E9C0", // Light teal
       textColor: "text-green-800",
-      buttonColor: "bg-green-700 hover:bg-green-800"
+      buttonColor: "bg-green-700 hover:bg-green-800",
+      pageLink: "/what-we-do/environment"
     },
     'HER POWER': {
       image: "HER POWER.jpg",
@@ -49,7 +53,8 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       description: "When women rise, communities transform. Vaani Foundation champions skill development, leadership, and livelihood opportunities for women through training sessions, workshops, and support for self-help groups. We encourage women to take part in decision-making, entrepreneurship, and sustainable initiatives that bring both economic and social progress. Our programs aim not just to support women but to make them catalysts of growth — turning potential into power, and dreams into reality.",
       bgColor: "#FDF2F8", // Light pink
       textColor: "text-pink-700",
-      buttonColor: "bg-pink-500 hover:bg-pink-600"
+      buttonColor: "bg-pink-500 hover:bg-pink-600",
+      pageLink: "/what-we-do/womanempowerment"
     },
     LIVELIHOOD: {
       image: "LIVELIHOOD.PNG",
@@ -57,7 +62,8 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       description: "Our livelihood initiatives focus on sustainable rural development and income generation. Through biyarant kit distribution, biofertilizer support, and skill-based training, we help farmers and rural youth achieve financial stability. We integrate livelihood creation with environmental consciousness — promoting green technologies, solar lighting, and water conservation. By building capacity and community ownership, we ensure that progress is not temporary, but a continuous journey toward dignity and self-reliance.",
       bgColor: "#F0F4E8", // Lighter, more neutral background
       textColor: "text-green-900", // Darker green for better contrast
-      buttonColor: "bg-green-700 hover:bg-green-800" // Matching green button
+      buttonColor: "bg-green-700 hover:bg-green-800", // Matching green button
+      pageLink: "/what-we-do/youth"
     }
   };
 
@@ -90,15 +96,17 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
               <p className={`text-base sm:text-lg mb-6 sm:mb-8 ${data.textColor.replace('text-', 'text-opacity-80 text-')}`}>
                 {data.description}
               </p>
-              <button 
-                className={`${data.buttonColor} text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-full transition-colors w-full sm:w-auto text-sm sm:text-base`}
-              >
-                KNOW MORE
-              </button>
+              <Link to={data.pageLink}>
+                <button 
+                  className={`${data.buttonColor} text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-full transition-colors w-full sm:w-auto text-sm sm:text-base`}
+                >
+                  KNOW MORE
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
   );
 };

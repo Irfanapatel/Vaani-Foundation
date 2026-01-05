@@ -117,11 +117,11 @@ const OverviewPage = () => {
         </div>
 
         {/* Our Theory of Change */}
-        <div className="pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8 bg-white w-full">
+        <div className="pt-8 pb-8 sm:pt-4 sm:pb-4 md:pt-6 md:pb-6 lg:pt-8 lg:pb-4 bg-white w-full">
           <div className="w-full">
             <div className="text-center w-full px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-3 sm:mb-4 md:mb-6 lg:mb-8 uppercase">OUR THEORY OF CHANGE</h2>
-              <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 mb-3 sm:mb-4 md:mb-6 lg:mb-8 uppercase">OUR THEORY OF CHANGE</h2>
+              <p className="text-lg text-gray-600 max-w-7xl mx-auto leading-relaxed pb-4 sm:pb-6 md:pb-8 lg:pb-10">
                 The work we do at Vaani Foundation is guided by a clear approach to community-led development. Each principle reflects our commitment to creating meaningful, scalable, and sustainable change at the ground level.
               </p>
             </div>
@@ -270,7 +270,7 @@ const OurJourney = () => {
   return (
     <section className="pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4 md:pb-6 lg:pb-8 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-700 uppercase">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center uppercase">
           OUR JOURNEY IN THE LAST THREE YEARS
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10 max-w-[1600px] mx-auto px-6">

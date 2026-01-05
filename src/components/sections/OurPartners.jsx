@@ -47,7 +47,7 @@ const OurPartners = () => {
 
   return (
     <section className="w-full pt-0 pb-16 bg-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Header with Ribbon */}
         <div className="partner-heading-wrapper">
           <h2 className="partner-heading">Our Partners</h2>
@@ -115,9 +115,9 @@ const OurPartners = () => {
           }
         `}</style>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 px-2 sm:px-0">
           {/* Corporate Partners */}
-          <div className="bg-white rounded-lg p-8">
+          <div className="bg-white rounded-lg p-5 sm:p-6 md:p-8 w-full overflow-hidden">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Corporate Partners</h3>
               <p className="text-gray-600">
@@ -127,11 +127,11 @@ const OurPartners = () => {
                Our partnership are built on transparency, accountability and measurable outcomes.                
               </p>
             </div>
-            <div className="relative w-full overflow-hidden mb-6 py-4">
+            <div className="relative w-full overflow-x-auto py-4 -mx-2 sm:-mx-4 px-2 sm:px-4">
               <div className="flex gap-8 w-max animate-marquee hover:animation-pause">
                 {/* First set of logos */}
                 {corporatePartners.map((partner, index) => (
-                  <div key={`first-${partner.id}`} className="w-28 h-28 p-3 bg-white border border-gray-100 rounded-lg shadow-sm flex-shrink-0 flex items-center justify-center">
+                  <div key={`first-${partner.id}`} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-1">
                     <img 
                       src={partner.logo} 
                       alt={partner.name}
@@ -142,7 +142,7 @@ const OurPartners = () => {
                 ))}
                 {/* Second set of logos (duplicate for seamless loop) */}
                 {corporatePartners.map((partner, index) => (
-                  <div key={`second-${partner.id}`} className="w-28 h-28 p-3 bg-white border border-gray-100 rounded-lg shadow-sm flex-shrink-0 flex items-center justify-center">
+                  <div key={`second-${partner.id}`} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-1">
                     <img 
                       src={partner.logo} 
                       alt={partner.name}
@@ -171,7 +171,7 @@ const OurPartners = () => {
           </div>
 
           {/* Government & Public Institution Collaboration */}
-          <div className="bg-white rounded-lg p-8">
+          <div className="bg-white rounded-lg p-5 sm:p-6 md:p-8 w-full overflow-hidden">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">Government & Public Institution Collaboration</h3>
               <p className="text-gray-600">
@@ -195,13 +195,13 @@ const OurPartners = () => {
         </div>
 
         {/* How We Partner Section */}
-        <div className="text-center mt-16 px-4">
+        <div className="text-center mt-12 md:mt-16 px-3 sm:px-4">
           <h3 className="text-3xl font-bold text-blue-800 mb-6">How We Partner</h3>
           <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-lg">
             Our partnership approach is built on transparency, impact measurement, and shared values.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: icon1,
@@ -219,8 +219,8 @@ const OurPartners = () => {
                 description: "Initiatives aligned with UN Sustainable Development Goals for lasting change."
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white px-8 py-6 rounded-2xl hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center border border-gray-100">
-                <div className="w-32 h-32 flex items-center justify-center">
+              <div key={index} className="bg-white px-5 sm:px-6 md:px-8 py-6 rounded-2xl hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center text-center border border-gray-100">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex items-center justify-center">
                   <img 
                     src={item.icon} 
                     alt={item.title} 

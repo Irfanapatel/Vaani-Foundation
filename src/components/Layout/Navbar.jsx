@@ -47,12 +47,12 @@ export function Navbar() {
       <div className="bg-blue-700 text-white w-full h-10 flex items-center">
         <div className="w-full h-full relative">
           <div className="absolute right-0 top-0 bottom-0 flex items-center pr-4 pl-4 bg-blue-700 z-10">
-            <a href="tel:+91 88666 85088" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5">
+            <a href="tel:+91 88666 85088" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5 pr-3">
               <Phone className="h-3.5 w-3.5" strokeWidth={2.5} />
               <span className="hidden sm:inline">+91 88666 85088</span>
             </a>
             <span className="mx-2 hidden sm:inline">|</span>
-            <a href="mailto:info@vaanifoundation.org" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5">
+            <a href="mailto:info@vaanifoundation.org" className="no-underline text-white/90 hover:text-white flex items-center gap-1.5 pl-1">
               <Mail className="h-3.5 w-3.5" strokeWidth={2.5} />
               <span className="hidden sm:inline">info@vaanifoundation.org</span>
             </a>
@@ -68,14 +68,14 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <a href="/" className="flex items-center gap-3 no-underline">
-              <img src={logo} alt="Vaani Foundation" className="h-14 md:h-16 w-auto" />
-              <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">Vaani Foundation</span>
+            <a href="/" className="flex items-center gap-2 no-underline">
+              <img src={logo} alt="Vaani Foundation" className="h-8 lg:h-16 w-auto" />
+              <span className="text-lg lg:text-3xl font-extrabold tracking-tight text-gray-900">Vaani Foundation</span>
             </a>
           </div>
 
-          {/* Centered Navigation */}
-          <div className="hidden md:flex items-center justify-center">
+          {/* Centered Navigation - hidden on mobile and iPad */}
+          <div className="hidden lg:flex items-center justify-center">
             <div className="flex items-center gap-8 flex-nowrap">
               {navItems.map((item) => (
                 <div 
@@ -116,8 +116,8 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Right actions */}
-          <div className="hidden md:flex items-center justify-end gap-4">
+          {/* Right actions - hidden on mobile and iPad */}
+          <div className="hidden lg:flex items-center justify-end gap-4">
             <a
               href="/donate"
               className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
@@ -126,8 +126,14 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex items-center md:hidden">
+          {/* Mobile menu button and Donate Now - shown on both mobile and iPad */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href="/donate"
+              className="no-underline inline-flex items-center rounded-full bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors whitespace-nowrap"
+            >
+              Donate Now
+            </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
@@ -143,9 +149,9 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - shown on both mobile and iPad */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-[5rem] left-0 right-0 bg-white border-b border-gray-200 shadow-sm py-4 px-6">
+        <div className="lg:hidden absolute top-[5rem] left-0 right-0 bg-white border-b border-gray-200 shadow-sm py-4 px-6">
           <div className="space-y-4">
             {navItems.map((item) => (
               <div key={item.name} className="space-y-2">

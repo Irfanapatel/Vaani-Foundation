@@ -184,11 +184,11 @@ export const InfiniteMovingCards = ({
           animation-play-state: paused;
         }
       `}</style>
-      <div className="scroller-mask overflow-x-auto overflow-y-hidden">
+      <div className="scroller-mask overflow-x-auto overflow-y-hidden -mx-2 sm:-mx-3 md:-mx-4">
         <ul
           ref={scrollerRef}
           className={cn(
-            "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 select-none",
+            "flex w-max min-w-full shrink-0 flex-nowrap gap-3 sm:gap-4 py-0.5 sm:py-2 md:py-4 px-2 sm:px-3 md:px-4 select-none",
             start && !isDragging.current && "animate-scroll",
             pauseOnHover && "hover-paused"
           )}
@@ -196,7 +196,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li
             className={cn(
-              `relative w-[320px] max-w-full shrink-0 rounded-2xl border border-zinc-200 p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-grab active:cursor-grabbing bg-gradient-to-br ${colors[idx % colors.length]}`,
+              `relative w-[280px] sm:w-[300px] md:w-[320px] lg:w-[350px] max-w-full shrink-0 rounded-2xl border border-zinc-200 p-4 sm:p-5 md:p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 cursor-grab active:cursor-grabbing bg-gradient-to-br ${colors[idx % colors.length]}`,
               "dark:border-zinc-700",
               cardClassName
             )}
@@ -206,20 +206,20 @@ export const InfiniteMovingCards = ({
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}>
             <blockquote className="h-full flex flex-col">
-              <div className="shrink-0 mb-6 flex justify-center">
-                {item.icon || <span className="text-4xl">{item.title}</span>}
+              <div className="shrink-0 mb-3 sm:mb-4 md:mb-5 lg:mb-6 flex justify-center">
+                {item.icon || <span className="text-3xl sm:text-4xl">{item.title}</span>}
               </div>
               <div className={cn("grow flex flex-col", contentClassName)}>
                 {item.heading && (
                   <h3 className={cn(
-                    "text-xl font-bold text-gray-800 mb-3",
+                    "text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2 sm:mb-3 md:mb-3",
                     "dark:text-gray-200"
                   )}>
                     {item.heading}
                   </h3>
                 )}
                 <p className={cn(
-                  "text-base text-gray-600 dark:text-gray-300 mb-4 leading-relaxed",
+                  "text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 mb-2 sm:mb-3 md:mb-4 leading-relaxed md:leading-normal",
                   quoteClassName
                 )}>
                   {item.quote}

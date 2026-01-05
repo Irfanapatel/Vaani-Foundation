@@ -92,8 +92,44 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
       <PinkBox />
       <div className="pt-8 pb-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">OUR FIELDS OF WORK</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">OUR FIELDS OF WORK</h2>
+          {/* Mobile & Tablet: Horizontal scrollable container */}
+          <div className="lg:hidden w-full overflow-x-auto pb-4 -mx-2 sm:-mx-4 px-2 sm:px-4">
+            <div className="flex gap-3 sm:gap-4 w-max min-w-full">
+              {fields.map((field) => (
+                <div 
+                  key={field} 
+                  onClick={() => setActiveField(field)}
+                  className="flex-shrink-0 w-36 sm:w-44"
+                >
+                  <CometCard 
+                    className={`overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all w-full mx-auto ${
+                      activeField === field ? 'ring-2 ring-blue-500' : ''
+                    }`}
+                  >
+                    <div className="w-full">
+                      <div className="w-full h-40 sm:h-48 bg-gray-100 overflow-hidden">
+                        <img 
+                          src={`/src/assets/field/${field.toUpperCase()}.jpg`} 
+                          alt={field}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            e.target.src = `https://via.placeholder.com/300x400/F3F4F6/6B7280?text=${field}`;
+                          }}
+                        />
+                      </div>
+                      <div className="p-2 sm:p-3 bg-white">
+                        <h3 className="text-sm sm:text-base font-semibold text-center text-gray-800 truncate">{field}</h3>
+                      </div>
+                    </div>
+                  </CometCard>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Desktop: Grid layout */}
+          <div className="hidden lg:grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4 px-4">
             {fields.map((field) => (
               <div 
                 key={field} 

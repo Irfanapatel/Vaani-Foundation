@@ -4,6 +4,7 @@ import { HeartHandshake, Sparkles, Users } from 'lucide-react';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 import missionImage from '../assets/missionvision.jpg';
 import childrenPic from '../assets/Children-pic.jpg';
+import visionImage from '../assets/images.jpg';
 
 // Inline styles instead of styled components
 const styles = {
@@ -122,7 +123,7 @@ const styles = {
     padding: '0 1rem'
   },
   commitmentsSection: {
-    py: 1,
+    py: { xs: 0.5, md: 1 },
     width: '100%',
     backgroundColor: '#dbeafe', // blue-100
     '& .MuiContainer-root': {
@@ -143,15 +144,17 @@ const styles = {
   cardsContainer: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    gap: 6,
-    justifyContent: 'center',
-    alignItems: 'stretch',
+    gap: { xs: 1, md: 6 },
+    justifyContent: { xs: 'center', md: 'center' },
+    alignItems: 'center',
     flexWrap: 'wrap',
-    mb: 4,
+    mb: { xs: 2, md: 4 },
+    width: '100%',
   },
   card: {
-    flex: '1 1 300px',
+    flex: { xs: '0 1 300px', md: '1 1 300px' },
     maxWidth: '280px',
+    width: '100%',
     backgroundColor: 'white',
     borderRadius: '16px',
     boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
@@ -160,7 +163,7 @@ const styles = {
     flexDirection: 'column',
     transition: 'all 0.3s ease',
     position: 'relative',
-    marginTop: '30px',
+    marginTop: { xs: '15px', md: '30px' },
     border: '1px solid rgba(0,0,0,0.05)',
     '&:hover': {
       transform: 'translateY(-5px)',
@@ -168,8 +171,9 @@ const styles = {
     },
   },
   cardHeader: {
-    height: '70px',
+    height: { xs: '90px', md: '70px' },
     position: 'relative',
+    paddingTop: { xs: '20px', md: '0' },
     '&:after': {
       content: '""',
       position: 'absolute',
@@ -188,8 +192,8 @@ const styles = {
     bottom: '0',
     left: '50%',
     transform: 'translate(-50%, 50%)',
-    width: '110px',
-    height: '110px',
+    width: { xs: '90px', md: '110px' },
+    height: { xs: '90px', md: '110px' },
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -207,8 +211,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: '260px',
-    paddingTop: '40px',
+    minHeight: { xs: '220px', md: '260px' },
+    paddingTop: { xs: '30px', md: '40px' },
+    paddingBottom: { xs: '20px', md: '24px' },
   },
   commitmentFooter: {
     textAlign: 'center',
@@ -239,29 +244,29 @@ const MissionVision = () => {
       {/*Vaani Foundation */}
       <Box sx={styles.section}>
         <Box className="vaani-foundation-container" sx={styles.vaaniFoundationContainer}>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
             VAANI FOUNDATION MISSION AND VISION
           </h2>
-          <div className="space-y-6">
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
+          <div className="space-y-6 text-lg text-gray-700 text-justify">
+            <p>
               Vaani Foundation is a grassroots-driven nonprofit organization committed to uplifting underserved and marginalized communities across rural India. Since our inception, we have been working to ensure that every individual—regardless of their background—has access to education, healthcare, livelihood opportunities, and a dignified life.
-            </Typography>
+            </p>
 
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
+            <p>
               We strongly believe that progress becomes meaningful only when it reaches those who need it the most. Guided by compassion, transparency, and long-term commitment, we work hand-in-hand with communities to build sustainable and self-reliant futures. With a bold vision and community-led approach, we strive to deliver practical solutions that create measurable, lasting impact.
-            </Typography>
+            </p>
 
-            <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
+            <p>
               Across villages and rural regions, Vaani Foundation implements programs focused on education support, women empowerment, livelihood training, environmental conservation, and improved healthcare access. Our initiatives address local needs, strengthen community capacities, and create opportunities for growth and empowerment.
-              </Typography>
+            </p>
 
-              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
-                We are proud to contribute to equitable development by collaborating with CSR partners, government bodies, and local institutions. Together, we work to reduce inequalities, support vulnerable groups, and build resilient communities capable of driving their own progress.
-              </Typography>
+            <p>
+              We are proud to contribute to equitable development by collaborating with CSR partners, government bodies, and local institutions. Together, we work to reduce inequalities, support vulnerable groups, and build resilient communities capable of driving their own progress.
+            </p>
 
-              <Typography variant="body1" sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
-                By transforming challenges into opportunities, we stay committed to shaping a future where every person—especially the underserved—can learn, grow, and live with dignity. At Vaani Foundation, we don’t just dream of change—we work every day to make it a reality.
-              </Typography>
+            <p>
+              By transforming challenges into opportunities, we stay committed to shaping a future where every person—especially the underserved—can learn, grow, and live with dignity. At Vaani Foundation, we don’t just dream of change—we work every day to make it a reality.
+            </p>
           </div>
         </Box>
       </Box>
@@ -384,7 +389,7 @@ const MissionVision = () => {
           <Box sx={styles.visionMissionImageBox}>
             <Box
               component="img"
-              src={missionImage}
+              src={visionImage}
               alt="Community work - Vaani Foundation mission"
               sx={styles.visionMissionImage}
             />

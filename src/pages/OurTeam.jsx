@@ -151,11 +151,14 @@ const ContentWrapper = styled(Box)({
   marginTop: '-0.5rem',
 });
 
-const NameText = styled(Typography)({
+const NameText = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
-  fontSize: '1.75rem',
+  fontSize: '1.4rem',
+  [theme.breakpoints.up('md')]: {
+    fontSize: '1.75rem',
+  },
   marginBottom: '0.75rem',
-});
+}));
 
 const RoleText = styled(Typography)({
   fontWeight: 600,

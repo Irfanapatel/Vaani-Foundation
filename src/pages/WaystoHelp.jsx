@@ -2,39 +2,44 @@ import { Heart, Handshake, Lightbulb, Users, Megaphone, Share2, MessageCircle } 
 import heroImage from '../assets/Overview.jpg';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
 
-// Helper component for consistent card styling
+// Helper component for consistent card styling with enhanced design
 const HelpCard = ({ title, description, icon: Icon, ctaText, ctaLink = '#' }) => {
   return (
-    <div className="group relative bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden">
-      <div className="flex flex-col items-center text-center">
-        {/* Icon */}
-        <div className="mb-6">
-          <div className="text-blue-500">
-            <Icon className="w-12 h-12 mx-auto" />
-          </div>
+    <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-1 h-full flex flex-col">
+      {/* Gradient accent bar */}
+      <div className="h-1.5 bg-gradient-to-r from-blue-500 to-teal-500 w-full"></div>
+      
+      <div className="p-8 flex-1 flex flex-col">
+        {/* Icon with gradient background */}
+        <div className="mb-6 w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <Icon className="w-8 h-8 text-blue-600" />
         </div>
         
         {/* Title and description */}
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">{title}</h3>
-        <p className="text-gray-600 mb-6 leading-relaxed">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-gray-600 mb-6 leading-relaxed flex-1">
           {description}
         </p>
         
-        {/* Read More button */}
-        <a 
-          href={ctaLink}
-          className="inline-flex items-center px-6 py-2.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-sm font-medium"
-        >
-          {ctaText}
-          <svg 
-            className="w-4 h-4 ml-2" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
+        {/* Animated CTA button */}
+        <div className="mt-auto pt-4">
+          <a 
+            href={ctaLink}
+            className="inline-flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-lg hover:from-blue-700 hover:to-teal-700 transition-all duration-300 text-sm font-medium group-hover:shadow-lg group-hover:shadow-blue-100"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </a>
+            {ctaText}
+            <svg 
+              className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -112,7 +117,7 @@ const WaysToHelp = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
             EXPLORE THE WAYS YOU CAN CREATE A LASTING IMPACT
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">

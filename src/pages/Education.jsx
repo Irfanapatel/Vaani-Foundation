@@ -43,11 +43,11 @@ export default function Education() {
 
       {/* Main education content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20">
-        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           DONATE FOR EDUCATION: GIVE EVERY CHILD THE CHANCE TO LEARN AND RISE
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
           LET US EMPOWER EVERY CHILD TO LEARN, GROW AND TRANSFORM THEIR FUTURE
         </h2>
 

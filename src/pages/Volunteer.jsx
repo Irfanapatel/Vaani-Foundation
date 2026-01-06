@@ -111,11 +111,11 @@ export default function Volunteer() {
 
       {/* Main volunteer content section with CTA */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-4 md:py-4">
-        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           MAKE A DIFFERENCE: VOLUNTEER WITH US
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-blue-600 uppercase">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
           Join Our Mission to Create Positive Change
         </h2>
 

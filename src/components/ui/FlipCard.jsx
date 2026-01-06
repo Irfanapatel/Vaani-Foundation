@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FlipCard = ({
   title,
@@ -9,10 +10,22 @@ const FlipCard = ({
   altText = '',
   ctaLabel = 'READ MORE',
   onCtaClick,
+  readMoreLink,
   panelColor = '#f7cfd8',
   panelTextColor = '#3b0d16',
   buttonTextColor = '#ffffff'
 }) => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (e) => {
+    if (onCtaClick) {
+      onCtaClick(e);
+    }
+    if (readMoreLink) {
+      navigate(readMoreLink);
+    }
+  };
+
   const getImageSource = (src) => {
     if (!src) return '';
     if (src.startsWith('http')) {
@@ -63,7 +76,7 @@ const FlipCard = ({
             {ctaLabel && (
               <button
                 type="button"
-                onClick={onCtaClick}
+                onClick={handleButtonClick}
                 className="flip-card-panel-button font-medium tracking-wider px-8 py-3"
               >
                 {ctaLabel}

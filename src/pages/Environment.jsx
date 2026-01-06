@@ -63,11 +63,11 @@ export default function Environment() {
 
       {/* Main environment content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12">
-        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           LET US NURTURE A GREENER, HEALTHIER PLANET, TOGETHER
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
          Join Our Mission to Advance Environmental Sustainability Through Large-Scale Tree Plantation and Community Participation
         </h2>
         <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">

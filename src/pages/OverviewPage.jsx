@@ -208,7 +208,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's education initiative in 2021",
       panelColor: "#f7cfd8",
       panelTextColor: "#3b0d16",
-      buttonColor: "#8c1c32"
+      buttonColor: "#8c1c32",
+      readMoreLink: "/what-we-do/education"
     },
     {
       title: "Smart Rural Health",
@@ -219,7 +220,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's expansion in 2022",
       panelColor: "#fce3c9",
       panelTextColor: "#4b1d05",
-      buttonColor: "#c05621"
+      buttonColor: "#c05621",
+      readMoreLink: "/what-we-do/healthservices"
     },
     {
       title: "Environment & Plantation",
@@ -230,7 +232,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's environmental initiatives in 2023",
       panelColor: "#e2f5e7",
       panelTextColor: "#0f3d1f",
-      buttonColor: "#047857"
+      buttonColor: "#047857",
+      readMoreLink: "/what-we-do/environment"
     },
     {
       title: "Solar & Energy Project",
@@ -241,7 +244,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's solar power initiatives",
       panelColor: "#fff3c7",
       panelTextColor: "#4a3500",
-      buttonColor: "#d97706"
+      buttonColor: "#d97706",
+      readMoreLink: "/what-we-do/environment"
     },
     {
       title: "She Leads, She Grows",
@@ -252,7 +256,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's skills training programs",
       panelColor: "#dee8ff",
       panelTextColor: "#0a1c4a",
-      buttonColor: "#1d4ed8"
+      buttonColor: "#1d4ed8",
+      readMoreLink: "/what-we-do/womanempowerment"
     },
     {
       title: "Cricket for Confidence",
@@ -263,7 +268,8 @@ const OurJourney = () => {
       alt: "Vaani Foundation's sports development programs",
       panelColor: "#ffe0ec",
       panelTextColor: "#4a102b",
-      buttonColor: "#be185d"
+      buttonColor: "#be185d",
+      readMoreLink: "/what-we-do/youth"
     }
   ];
 
@@ -286,6 +292,7 @@ const OurJourney = () => {
                 panelColor={item.panelColor}
                 panelTextColor={item.panelTextColor}
                 buttonColor={item.buttonColor}
+                readMoreLink={item.readMoreLink}
               />
             </div>
           ))}

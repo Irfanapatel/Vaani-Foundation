@@ -78,19 +78,19 @@ const Youth = () => {
 
       {/* Main content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-10 md:pb-12">
-        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           LET US BUILD A STRONGER, MORE CARING COMMUNITY, TOGETHER
-          </p>
+        </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600">
+        <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
           Join Our Mission to Support Communities Through Meaningful Engagement and Compassionate Initiatives
-          </h2>
-          <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
-            At Vaani Foundation, we believe that collective well-being grows when communities come together to support one another. Through focused outreach programs, humanitarian activities, and inclusive engagement efforts, we work to uplift individuals and families during times of need.
-          </p>
-          <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
-            Our initiatives aim to bring people closer, foster unity, and ensure that vulnerable groups receive essential assistance during difficult circumstances. Whether it is organizing local events that promote sports and youth development, or distributing food and necessities during crises, our goal is to strengthen community bonds and inspire a spirit of cooperation and resilience.
-          </p>
+        </h2>
+        <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
+          At Vaani Foundation, we believe that collective well-being grows when communities come together to support one another. Through focused outreach programs, humanitarian activities, and inclusive engagement efforts, we work to uplift individuals and families during times of need.
+        </p>
+        <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
+          Our initiatives aim to bring people closer, foster unity, and ensure that vulnerable groups receive essential assistance during difficult circumstances. Whether it is organizing local events that promote sports and youth development, or distributing food and necessities during crises, our goal is to strengthen community bonds and inspire a spirit of cooperation and resilience.
+        </p>
       </section>
 
       {/* Cards Section */}

@@ -160,56 +160,56 @@ export default function Donate() {
 
       {/* Main content section */}
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20">
-        <p className="text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-[0.25em] text-black uppercase mb-4 text-center">
           YOUR SUPPORT CAN MAKE A DIFFERENCE
         </p>
 
         <div className="pb-0">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-blue-600 uppercase">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
             WHY YOUR <span className="text-blue-600">DONATION</span> MATTERS
           </h2>
 
-          <div className="flex overflow-x-auto pb-6 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8 md:overflow-hidden md:px-0 md:mx-0">
+          <div className="flex gap-4 md:gap-6 lg:gap-8 overflow-x-auto pb-6 px-4 -mx-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:px-0 md:mx-0 snap-x snap-mandatory">
           {/* Community Development */}
-          <div className="bg-white border border-gray-200 p-6 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 shrink-0 w-[280px] md:w-auto md:shrink">
-            <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 md:mb-4">
+          <div className="bg-white border border-gray-200 p-4 md:p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col transform hover:-translate-y-1 shrink-0 w-[85vw] max-w-[280px] snap-center md:w-auto h-[300px]">
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto mb-2 md:mb-3">
               <img src={communityDevImg} alt="Community Development" className="w-full h-full object-contain" />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-center mb-2 md:mb-3 text-gray-800">Community Development</h3>
-            <p className="text-sm md:text-base text-gray-600 text-center mt-auto">
+            <h3 className="text-base md:text-lg font-semibold text-center mb-1 md:mb-2 text-gray-800">Community Development</h3>
+            <p className="text-xs md:text-sm text-gray-600 text-center">
               Your contribution helps us implement sustainable development projects that uplift entire communities and create lasting change.
             </p>
           </div>
 
           {/* Education Support */}
-          <div className="bg-white border border-gray-200 p-6 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 shrink-0 w-[280px] md:w-auto md:shrink">
-            <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 md:mb-4">
+          <div className="bg-white border border-gray-200 p-4 md:p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col transform hover:-translate-y-1 shrink-0 w-[85vw] max-w-[280px] snap-center md:w-auto h-[300px]">
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto mb-2 md:mb-3">
               <img src={educationImg} alt="Education Support" className="w-full h-full object-contain" />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-center mb-2 md:mb-3 text-gray-800">Education Support</h3>
-            <p className="text-sm md:text-base text-gray-600 text-center mt-auto">
+            <h3 className="text-base md:text-lg font-semibold text-center mb-1 md:mb-2 text-gray-800">Education Support</h3>
+            <p className="text-xs md:text-sm text-gray-600 text-center">
               Your donations provide educational resources, scholarships, and learning opportunities for underprivileged children and youth.
             </p>
           </div>
 
           {/* Sustainable Initiatives */}
-          <div className="bg-white border border-gray-200 p-6 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 shrink-0 w-[280px] md:w-auto md:shrink">
-            <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 md:mb-4">
+          <div className="bg-white border border-gray-200 p-4 md:p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col transform hover:-translate-y-1 shrink-0 w-[85vw] max-w-[280px] snap-center md:w-auto h-[300px]">
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto mb-2 md:mb-3">
               <img src={sustainableImg} alt="Sustainable Initiatives" className="w-full h-full object-contain" />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-center mb-2 md:mb-3 text-gray-800">Sustainable Initiatives</h3>
-            <p className="text-sm md:text-base text-gray-600 text-center mt-auto">
+            <h3 className="text-base md:text-lg font-semibold text-center mb-1 md:mb-2 text-gray-800">Sustainable Initiatives</h3>
+            <p className="text-xs md:text-sm text-gray-600 text-center">
               We invest in sustainable solutions that create long-term impact, ensuring your donation keeps giving for years to come.
             </p>
           </div>
 
           {/* Transparent Utilization */}
-          <div className="bg-white border border-gray-200 p-6 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1 shrink-0 w-[280px] md:w-auto md:shrink">
-            <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-3 md:mb-4">
+          <div className="bg-white border border-gray-200 p-4 md:p-5 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col transform hover:-translate-y-1 shrink-0 w-[85vw] max-w-[280px] snap-center md:w-auto h-[300px]">
+            <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mx-auto mb-2 md:mb-3">
               <img src={transparentImg} alt="Transparent Utilization" className="w-full h-full object-contain" />
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-center mb-2 md:mb-3 text-gray-800">Transparent Utilization</h3>
-            <p className="text-sm md:text-base text-gray-600 text-center mt-auto">
+            <h3 className="text-base md:text-lg font-semibold text-center mb-1 md:mb-2 text-gray-800">Transparent Utilization</h3>
+            <p className="text-xs md:text-sm text-gray-600 text-center">
               We maintain complete transparency in how funds are utilized, with regular reports on the impact of your donation.
             </p>
           </div>
@@ -289,7 +289,7 @@ export default function Donate() {
             {/* Contact Form */}
             <div className="bg-sky-50 rounded-2xl p-8 shadow-lg">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-black">Dionation Form</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-black">Dionation Form</h1>
               </div>
               
               {contactSuccess && (
@@ -465,7 +465,7 @@ export default function Donate() {
             {/* Safe, Secure & Trusted NGO */}
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-black">Safe, Secure & Trusted NGO</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-black">Safe, Secure & Trusted NGO</h1>
               </div>
               
               <div className="space-y-6">

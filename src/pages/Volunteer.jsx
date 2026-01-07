@@ -1,23 +1,19 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaCheckCircle } from 'react-icons/fa';
-import heroImage from '../assets/Overview.jpg';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
+import VolunterImage from '../assets/volunteer.png';
 
 function VolunteerHero() {
   return (
     <section className="w-full flex justify-end overflow-hidden m-0 p-0 relative mt-[120px]">
       <div className="relative h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] w-full">
         <img
-          src={heroImage}
+          src={VolunterImage}
           alt="Volunteer with us"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
-            Join Our Volunteer Community
-          </h1>
-        </div>
+      
       </div>
     </section>
   );

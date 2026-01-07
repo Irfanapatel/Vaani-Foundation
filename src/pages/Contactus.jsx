@@ -1,27 +1,7 @@
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-import heroImage from '../assets/Overview.jpg';
 import { Breadcrumbs } from '../components/ui/Breadcrumbs';
-
-function ContactHero() {
-  return (
-    <section className="w-full flex justify-end overflow-hidden m-0 p-0 relative mt-[120px]">
-      <div className="relative h-[35vh] sm:h-[40vh] md:h-[47vh] lg:h-[55vh] w-full">
-        <img
-          src={heroImage}
-          alt="Contact Us"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
-            Get In Touch With Us
-          </h1>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -87,16 +67,12 @@ const Contactus = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen">
-      <ContactHero />
-      
-      {/* Breadcrumbs below hero section */}
+    <div className="bg-white min-h-screen pt-20">
       <Breadcrumbs />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Contact Us</h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">CONTACT US</h2>
+          <p className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed text-center">
             Get in touch with us. We're here to help and answer any questions you might have.
           </p>
         </div>
@@ -106,7 +82,7 @@ const Contactus = () => {
           {/* Contact Form Section */}
           <div className="bg-sky-50 rounded-2xl p-8 shadow-lg">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-blue-700">SEND US A MESSAGE</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">SEND US A MESSAGE</h1>
             </div>
             
             {isSuccess && (
@@ -238,12 +214,12 @@ const Contactus = () => {
           {/* Contact Information Section */}
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-blue-700">CONTACT INFORMATION</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">CONTACT INFORMATION</h1>
             </div>
             
             <div className="space-y-8">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-center">
                   FOR MORE INFORMATION
                 </h2>
                 

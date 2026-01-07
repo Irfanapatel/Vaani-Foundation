@@ -14,7 +14,8 @@ import adnanImage from '../assets/Our team/adnan.png';
 import muniraImage from '../assets/Our team/munira.png';
 import irfanaImage from '../assets/Our team/irfana.jpeg';
 import meetImage from '../assets/Our team/Meet.png';
-import pratikImage from '../assets/Our team/pratil.png'
+import pratikImage from '../assets/Our team/pratil.png';
+import martinImage from '../assets/Our team/martinsir.jpeg';
 
 // Page wrapper
 const PageContainer = styled(Box)({
@@ -192,7 +193,7 @@ const OurTeam = () => {
 
         <TeamCardAlt>
           <PhotoWrapper>
-            <Photo src={userImage} alt="Team member" />
+            <Photo src={martinImage} alt="Team member" />
           </PhotoWrapper>
 
           <ContentWrapper>
@@ -284,13 +285,10 @@ const OurTeam = () => {
             Maheshkumar G. Maheta – Executive Engineering irrigation Department-Bharuch
             </NameText>
             <BodyText>
-            Maheshkumar G. Maheta, serving as the Executive Engineer in the Irrigation Department, Bharuch, brings a wealth of expertise in water resource management and sustainable irrigation practices. His extensive experience in planning, designing and executing irrigation projects ensures that VaaniFoundation’s initiatives in water and agriculture management are technically sound and environmentally sustainable.
+            Maheshkumar G. Maheta, serving as the Executive Engineer in the Irrigation Department, Bharuch, brings extensive expertise in water resource management and sustainable irrigation practices. His rich experience in planning, designing, and executing irrigation projects ensures that Vaani Foundation’s initiatives in water and agriculture management are technically robust, environmentally sustainable, and aligned with best industry practices.
             </BodyText>
             <BodyText>
-            His role involves strategic project planning, efficient execution and strict adherence to regulatory standards. By optimizing resources and implementing best practices in irrigation and water conservation, the foundation is able to achieve tangible results while maintaining long-term sustainability.
-            </BodyText>
-            <BodyText>
-            Through these efforts, Vaani Foundation strengthens its capacity to deliver impactful programs that improve community welfare. The expertise and guidance provided in these initiatives support the foundation’s mission of promoting sustainable development, enabling innovative and effective solutions that address water management challenges and enhance the quality of life for local communities.
+            His role encompasses strategic project planning, efficient execution, and strict adherence to regulatory standards. By optimizing resources and promoting effective irrigation and water conservation methods, he contributes significantly to achieving tangible, long-term outcomes. Through his guidance, Vaani Foundation strengthens its capacity to deliver impactful programs that enhance community welfare, support sustainable development, address critical water management challenges, and improve the overall quality of life for local communities.
             </BodyText>
           </ContentWrapper>
         </TeamCardAlt3>
@@ -306,13 +304,10 @@ const OurTeam = () => {
             </NameText>
 
             <BodyText>
-            Yogesh Ashodariya, serving as a Technology Consultant at Tata Consultancy Services (TCS), brings extensive expertise in designing and implementing transformative digital solutions for complex organizational challenges. His deep understanding of technology architecture and strategic advisement enables the seamless integration of advanced systems, ensuring that digital initiatives are both effective and sustainable.
-            </BodyText>
+           Yogesh Ashodariya, serving as a Technology Consultant at Tata Consultancy Services (TCS), brings extensive expertise in designing and implementing transformative digital solutions for complex organizational challenges. His strong understanding of technology architecture and strategic advisory enables the seamless integration of advanced systems, ensuring that digital initiatives are effective, sustainable, and aligned with organizational objectives.
+           </BodyText>
             <BodyText>
-            With a focus on optimizing operational workflows, he leverages cutting-edge methodologies and industry best practices to enhance process efficiency and drive measurable outcomes. His guidance ensures that digital systems are aligned with organizational objectives, facilitating scalable solutions that adapt to evolving needs.
-            </BodyText>
-            <BodyText>
-              Through his contributions, VAANI Foundation benefits from robust technology frameworks that support data-driven decision-making, streamline operations, and enhance the overall impact of its programs. By enabling innovative digital transformation, he helps the foundation implement initiatives more efficiently, ultimately strengthening its capacity to deliver meaningful social and community outcomes.
+            By focusing on optimizing operational workflows, he applies industry best practices and modern methodologies to improve efficiency and deliver measurable outcomes. Through his contributions, VAANI Foundation benefits from robust, scalable technology frameworks that support data-driven decision-making, streamline operations, and enhance the overall impact of its programs, ultimately strengthening the foundation’s ability to deliver meaningful social and community outcomes.
             </BodyText>
           </ContentWrapper>
         </TeamCardAlt2>

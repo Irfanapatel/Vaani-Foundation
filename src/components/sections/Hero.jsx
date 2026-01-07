@@ -17,18 +17,14 @@ export function Hero() {
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef(null);
   
-  // Debug current slide
+  // Handle video playback when slide changes
   useEffect(() => {
-    console.log('Current slide:', currentImageIndex, 'Type:', heroMedia[currentImageIndex].type);
-    
     // If current slide is video, ensure it plays
     if (heroMedia[currentImageIndex].type === 'video' && videoRef.current) {
       const playPromise = videoRef.current.play();
       
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.error('Video play failed:', error);
-        });
+        playPromise.catch(() => {});
       }
     }
   }, [currentImageIndex]);
@@ -84,9 +80,7 @@ export function Hero() {
                     // Try to play the video when it's loaded
                     const playPromise = el.play();
                     if (playPromise !== undefined) {
-                      playPromise.catch(error => {
-                        console.error('Initial video play failed:', error);
-                      });
+                      playPromise.catch(() => {});
                     }
                   }
                 }}
@@ -100,9 +94,7 @@ export function Hero() {
                   if (currentImageIndex === heroMedia.findIndex(m => m.type === 'video')) {
                     const playPromise = e.target.play();
                     if (playPromise !== undefined) {
-                      playPromise.catch(error => {
-                        console.error('Video play on loadeddata failed:', error);
-                      });
+                      playPromise.catch(() => {});
                     }
                   }
                 }}

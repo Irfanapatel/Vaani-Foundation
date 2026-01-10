@@ -18,7 +18,7 @@ import Environment from './pages/Environment';
 import Youth from './pages/Youth';
 import Contactus from './pages/Contactus';
 import Volunteer from './pages/Volunteer';
-import WaysToHelp from './pages/WaysToHelp';
+import WaysToHelp from './pages/WaystoHelp';
 import Donate from './pages/Donate';
 import Certificats from './pages/Certificats';
 

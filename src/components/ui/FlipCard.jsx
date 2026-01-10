@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const FlipCard = ({
@@ -15,9 +15,33 @@ const FlipCard = ({
   panelTextColor = '#3b0d16',
   buttonTextColor = '#ffffff'
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  const handleCardClick = () => {
+    if (isMobile) {
+      setIsFlipped(!isFlipped);
+    }
+  };
+
   const handleButtonClick = (e) => {
+    e.stopPropagation(); // Prevent card flip when clicking the button
     if (onCtaClick) {
       onCtaClick(e);
     }
@@ -36,12 +60,21 @@ const FlipCard = ({
 
   return (
     <div
-      className="flip-card group relative w-full max-w-[700px] h-[550px] mx-auto overflow-hidden shadow-2xl"
+      className={`flip-card group relative w-full max-w-[700px] h-[550px] mx-auto overflow-hidden shadow-2xl ${isFlipped ? 'flipped' : ''}`}
       style={{
         '--flip-panel-bg': panelColor,
         '--flip-panel-text': panelTextColor,
         '--flip-button-bg': '#000000',
         '--flip-button-text': buttonTextColor
+      }}
+      onClick={handleCardClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleCardClick();
+        }
       }}
     >
 
@@ -54,7 +87,7 @@ const FlipCard = ({
         }}
       />
 
-      <div className="flip-card-panel">
+      <div className="flip-card-panel" onClick={(e) => e.stopPropagation()}>
         <div className="flip-card-panel-content flex flex-col items-center justify-center text-center h-full">
           <div className="max-w-md">
             <h3 className="inline-block bg-white text-black text-3xl md:text-4xl font-bold px-6 py-2 mb-6">

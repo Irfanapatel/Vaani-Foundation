@@ -75,6 +75,14 @@
   }
 
   .flip-card-panel {
+    transform: translateY(100%);
+  }
+  
+  .flip-card.flipped .flip-card-panel {
     transform: translateY(0);
+  }
+  
+  .flip-card.flipped .flip-card-image {
+    transform: scale(1.05);
   }
 }

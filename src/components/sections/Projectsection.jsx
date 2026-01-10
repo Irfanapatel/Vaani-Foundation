@@ -2,26 +2,26 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import images directly
-import educationImg from '../../assets/projectsection/EDUCATION.JPG';
+import educationImg from '../../assets/projectsection/EDUCATION.jpg';
 import healthImg from '../../assets/projectsection/HEALTH.png';
 import environmentImg from '../../assets/projectsection/ENVIRONMENT.PNG';
 import herPowerImg from '../../assets/projectsection/HER POWER.jpg';
-import livelihoodImg from '../../assets/PROJECTSECTION/LIVELIHOOD.png';
+import livelihoodImg from '../../assets/projectsection/LIVELIHOOD.png';
 
 export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'bg-gray-50' }) {
   // Map of image imports
   const imageMap = {
-    'EDUCATION.PNG': educationImg,
-    'HEALTH.PNG': healthImg,
+    'EDUCATION.jpg': educationImg,
+    'HEALTH.png': healthImg,
     'ENVIRONMENT.PNG': environmentImg,
     'HER POWER.jpg': herPowerImg,
-    'LIVELIHOOD.PNG': livelihoodImg
+    'LIVELIHOOD.png': livelihoodImg
   };
 
   // Data for each field
   const fieldData = {
     EDUCATION: {
-      image: "EDUCATION.PNG",
+      image: "EDUCATION.jpg",
       title: "Spreading Knowledge and Opportunities",
       description: "At Vaani Foundation, we believe that education is the bridge to equality and empowerment. Our initiatives aim to remove barriers for rural and underprivileged children through uniform and book distribution drives, digital learning installations in Anganwadis, and school infrastructure enhancement. By combining compassion with innovation, we create opportunities for every child to learn with dignity, confidence, and curiosity. Each effort strengthens the foundation of an educated, self-reliant generation that will lead tomorrow's change.",
       bgColor: "#E3F2FD", // Light blue
@@ -30,7 +30,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       pageLink: "/what-we-do/education"
     },
     HEALTH: {
-      image: "HEALTH.PNG",
+      image: "HEALTH.png",
       title: "Care for Every Family",
       description: "Health is the true wealth of a community. Through our Smart PHC program, health awareness campaigns, and medical resource support, we work to make healthcare accessible, affordable, and compassionate in rural Gujarat. Our interventions extend from equipping health centers with modern facilities to conducting community check-ups and emergency assistance. During the COVID-19 pandemic, our foundation stood with families in distress by distributing food, hygiene kits, and safety essentials, ensuring that no one was left behind.",
       bgColor: "#CAF0F8", // Very light blue
@@ -57,7 +57,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       pageLink: "/what-we-do/womanempowerment"
     },
     LIVELIHOOD: {
-      image: "LIVELIHOOD.PNG",
+      image: "LIVELIHOOD.png",
       title: "Creating Jobs and Building Stability",
       description: "Our livelihood initiatives focus on sustainable rural development and income generation. Through biyarant kit distribution, biofertilizer support, and skill-based training, we help farmers and rural youth achieve financial stability. We integrate livelihood creation with environmental consciousness — promoting green technologies, solar lighting, and water conservation. By building capacity and community ownership, we ensure that progress is not temporary, but a continuous journey toward dignity and self-reliance.",
       bgColor: "#F0F4E8", // Lighter, more neutral background

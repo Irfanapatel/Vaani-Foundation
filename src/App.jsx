@@ -25,6 +25,22 @@ import Certificats from './pages/Certificats';
 // Import Footer CSS
 import './components/Layout/Footer.css';
 
+// Import field images
+import educationFieldImg from './assets/field/EDUCATION.jpg';
+import healthFieldImg from './assets/field/HEALTH.jpg';
+import environmentFieldImg from './assets/field/ENVIRONMENT.jpg';
+import herPowerFieldImg from './assets/field/HER POWER.jpg';
+import livelihoodFieldImg from './assets/field/LIVELIHOOD.jpg';
+
+// Create image mapping
+const fieldImages = {
+  'EDUCATION': educationFieldImg,
+  'HEALTH': healthFieldImg,
+  'ENVIRONMENT': environmentFieldImg,
+  'HER POWER': herPowerFieldImg,
+  'LIVELIHOOD': livelihoodFieldImg
+};
+
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -110,7 +126,7 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
                     <div className="w-full">
                       <div className="w-full h-40 sm:h-48 bg-gray-100 overflow-hidden">
                         <img 
-                          src={`/src/assets/field/${field.toUpperCase()}.jpg`} 
+                          src={fieldImages[field.toUpperCase()] || `https://via.placeholder.com/300x400/F3F4F6/6B7280?text=${field}`}
                           alt={field}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                           onError={(e) => {
@@ -144,7 +160,7 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
                   <div className="w-full">
                     <div className="w-full h-56 bg-gray-100 overflow-hidden">
                       <img 
-                        src={`/src/assets/field/${field.toUpperCase()}.jpg`} 
+                        src={fieldImages[field.toUpperCase()] || `https://via.placeholder.com/300x400/F3F4F6/6B7280?text=${field}`}
                         alt={field}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         onError={(e) => {

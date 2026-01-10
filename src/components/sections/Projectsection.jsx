@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Import images directly
 import educationImg from '../../assets/projectsection/EDUCATION.jpg';
 import healthImg from '../../assets/projectsection/HEALTH.png';
-import environmentImg from '../../assets/projectsection/ENVIRONMENT.PNG';
+import environmentImg from '../../assets/projectsection/ENVIRONMENT.png';
 import herPowerImg from '../../assets/projectsection/HER POWER.jpg';
 import livelihoodImg from '../../assets/projectsection/LIVELIHOOD.png';
 
@@ -13,7 +13,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
   const imageMap = {
     'EDUCATION.jpg': educationImg,
     'HEALTH.png': healthImg,
-    'ENVIRONMENT.PNG': environmentImg,
+    'ENVIRONMENT.png': environmentImg,
     'HER POWER.jpg': herPowerImg,
     'LIVELIHOOD.png': livelihoodImg
   };
@@ -39,7 +39,7 @@ export default function Projectsection({ activeField = 'EDUCATION', bgColor = 'b
       pageLink: "/what-we-do/healthservices"
     },
     ENVIRONMENT: {
-      image: "ENVIRONMENT.PNG",
+      image: "ENVIRONMENT.png",
       title: "Protecting Nature for Future Generations",
       description: "Sustainability lies at the heart of everything we do. Vaani Foundation's environmental efforts focus on rainwater harvesting, solar energy promotion, and tree plantation drives that help restore the ecological balance. Our Catch the Rain and Green Future programs have revitalized groundwater levels, created green corridors, and educated communities on climate resilience. Each tree we plant, each drop we conserve, and each solar light we install is a step toward a cleaner, greener, and healthier planet.",
       bgColor: "#C7E9C0", // Light teal

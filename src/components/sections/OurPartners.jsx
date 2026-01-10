@@ -52,7 +52,7 @@ const OurPartners = () => {
         <div className="partner-heading-wrapper">
           <h2 className="partner-heading">Our Partners</h2>
         </div>
-        <style jsx>{`
+        <style jsx="true">{`
           .partner-heading-wrapper {
             text-align: center;
             margin: 0 0 20px;
@@ -152,7 +152,7 @@ const OurPartners = () => {
                   </div>
                 ))}
               </div>
-              <style jsx global>{`
+              <style jsx="true" global="true">{`
                 @keyframes marquee {
                   0% { transform: translateX(0); }
                   100% { transform: translateX(-50%); }
@@ -160,14 +160,11 @@ const OurPartners = () => {
                 .animate-marquee {
                   animation: marquee 30s linear infinite;
                 }
-                .hover\:animation-pause:hover {
+                .hover\\:animation-pause:hover {
                   animation-play-state: paused;
                 }
               `}</style>
             </div>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-colors">
-              Partner With Us
-            </button>
           </div>
 
           {/* Government & Public Institution Collaboration */}
@@ -188,9 +185,6 @@ const OurPartners = () => {
                 </li>
               ))}
             </ul>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition-colors">
-              Collaborate With Us
-            </button>
           </div>
         </div>
 

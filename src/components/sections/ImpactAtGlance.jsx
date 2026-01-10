@@ -3,25 +3,25 @@ import React from 'react';
 const ImpactAtGlance = () => {
   const impactStats = [
     {
-      number: '20+ LAC',
+      number: '1+ LAC',
       label: 'CHILDREN & THEIR FAMILIES',
       description: 'are impacted every year',
       bgColor: 'bg-blue-50'
     },
     {
-      number: '2000+',
+      number: '50+',
       label: 'VILLAGES & SLUMS',
       description: 'are reached out to across the country',
       bgColor: 'bg-blue-100'
     },
     {
-      number: '400+',
+      number: '200+',
       label: 'PROJECTS',
       description: 'focused on education, healthcare, and women empowerment',
       bgColor: 'bg-blue-50'
     },
     {
-      number: '27+',
+      number: '5+',
       label: 'STATES',
       description: 'are reached including the remotest areas',
       bgColor: 'bg-blue-100'

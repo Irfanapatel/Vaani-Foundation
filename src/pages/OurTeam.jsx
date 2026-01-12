@@ -16,6 +16,7 @@ import irfanaImage from '../assets/Our team/irfana.jpeg';
 import meetImage from '../assets/Our team/Meet.png';
 import pratikImage from '../assets/Our team/pratil.png';
 import martinImage from '../assets/Our team/martinsir.jpeg';
+import kapilImage from '../assets/Our team/kapilpatel.jpeg';
 
 // Page wrapper
 const PageContainer = styled(Box)({
@@ -256,6 +257,23 @@ const OurTeam = () => {
           </ContentWrapper>
         </TeamCardAlt2>
 
+        <TeamCardAlt>
+          <PhotoWrapper>
+            <Photo src={kapilImage} alt="Team member" />
+          </PhotoWrapper>
+
+          <ContentWrapper>
+            <NameText>
+           Kapil Patel – Civil Engineer & Planning Specialist
+            </NameText>
+            <BodyText>
+            Kapil Patel, a Civil Engineer, brings valuable expertise in planning, design coordination, and infrastructure-related support to Vaani Foundation’s development initiatives. His technical knowledge enables the foundation to approach projects with a strong emphasis on structural clarity, feasibility, and long-term sustainability.
+            </BodyText>
+            <BodyText>
+           He plays an important role in project planning, layout assessment, and execution support, ensuring that initiatives comply with technical standards and practical site requirements. With a focus on efficient planning and responsible engineering, he contributes to strengthening project execution and supports the foundation’s mission of delivering sustainable, community-focused development outcomes.
+           </BodyText>
+          </ContentWrapper>
+        </TeamCardAlt>
 
         <TeamCard>
           <PhotoWrapper>

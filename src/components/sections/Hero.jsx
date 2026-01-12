@@ -19,12 +19,20 @@ export function Hero() {
   
   // Handle video playback when slide changes
   useEffect(() => {
-    // If current slide is video, ensure it plays
     if (heroMedia[currentImageIndex].type === 'video' && videoRef.current) {
+      // Set video to autoplay with sound muted
+      videoRef.current.muted = true;
+      videoRef.current.playsInline = true;
+      
+      // Try to play the video
       const playPromise = videoRef.current.play();
       
+      // Handle autoplay restrictions
       if (playPromise !== undefined) {
-        playPromise.catch(() => {});
+        playPromise.catch(error => {
+          console.log('Autoplay prevented, showing controls', error);
+          videoRef.current.controls = true;
+        });
       }
     }
   }, [currentImageIndex]);
@@ -73,29 +81,57 @@ export function Hero() {
               />
             ) : (
               <video
-                ref={(el) => {
+                ref={el => {
                   if (el) {
                     videoRef.current = el;
                     el.playbackRate = 0.5;
-                    // Try to play the video when it's loaded
+                    el.muted = true;
+                    el.volume = 0; // Ensure no volume
+                    el.playsInline = true;
+                    
+                    // Try to play the video
                     const playPromise = el.play();
                     if (playPromise !== undefined) {
-                      playPromise.catch(() => {});
+                      playPromise.catch(() => {
+                        // If autoplay fails, show basic controls (without volume)
+                        el.controls = true;
+                        // Remove volume control if it exists
+                        if (el.volume !== undefined) {
+                          el.volume = 0;
+                        }
+                      });
                     }
                   }
                 }}
                 autoPlay
                 loop
                 muted
+                disablePictureInPicture
+                disableRemotePlayback
                 playsInline
+                preload="auto"
                 className="h-full w-full object-cover object-left"
                 onLoadedData={(e) => {
-                  // Ensure video plays when it's loaded
+                  // Ensure video plays when loaded
                   if (currentImageIndex === heroMedia.findIndex(m => m.type === 'video')) {
+                    e.target.muted = true;
+                    e.target.volume = 0;
                     const playPromise = e.target.play();
                     if (playPromise !== undefined) {
-                      playPromise.catch(() => {});
+                      playPromise.catch(() => {
+                        e.target.controls = true;
+                        if (e.target.volume !== undefined) {
+                          e.target.volume = 0;
+                        }
+                      });
                     }
+                  }
+                }}
+                onVolumeChange={(e) => {
+                  // Force mute if someone tries to unmute
+                  if (e.target.volume > 0) {
+                    e.target.volume = 0;
+                    e.target.muted = true;
                   }
                 }}
               >

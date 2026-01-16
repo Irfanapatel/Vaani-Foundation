@@ -151,13 +151,13 @@ export function Navbar() {
 
       {/* Mobile menu - shown on both mobile and iPad */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-white z-50 mt-24 overflow-y-auto">
-          <div className="p-6 space-y-4 max-h-[calc(100vh-6rem)]">
+        <div className="lg:hidden absolute top-[5rem] left-0 right-0 bg-white border-b border-gray-200 shadow-sm py-4 px-6">
+          <div className="space-y-4">
             {navItems.map((item) => (
               <div key={item.name} className="space-y-2">
                 <a
                   href={item.href}
-                  className="block py-3 no-underline text-gray-800 hover:text-blue-700 text-base font-semibold transition-colors border-b border-gray-100"
+                  className="block py-2 no-underline text-gray-800 hover:text-blue-700 text-base font-semibold transition-colors"
                   onClick={(e) => {
                     if (item.dropdown) {
                       e.preventDefault();
@@ -168,23 +168,15 @@ export function Navbar() {
                     }
                   }}
                 >
-                  <div className="flex justify-between items-center">
-                    <span>{item.name}</span>
-                    {item.dropdown && (
-                      <ChevronDown 
-                        size={18} 
-                        className={`transition-transform duration-200 ${hoveredDropdown === item.name ? 'rotate-180' : ''}`} 
-                      />
-                    )}
-                  </div>
+                  {item.name}
                 </a>
-                {item.dropdown && hoveredDropdown === item.name && (
-                  <div className="pl-4 space-y-2 mt-1 bg-blue-50 rounded-md p-2 mb-2">
+                {item.dropdown && (
+                  <div className="pl-4 space-y-2 mt-1 bg-blue-100 rounded-md p-2">
                     {item.dropdown.map((subItem) => (
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="block py-2.5 px-3 rounded text-gray-700 hover:bg-blue-100 hover:text-blue-800 text-sm font-medium transition-colors"
+                        className="block py-1.5 px-2 rounded text-gray-700 hover:bg-blue-200 hover:text-blue-800 text-sm font-medium transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -194,10 +186,10 @@ export function Navbar() {
                 )}
               </div>
             ))}
-            <div className="sticky bottom-0 left-0 right-0 bg-white py-4 border-t border-gray-200 mt-4">
+            <div className="flex items-center justify-end pt-2">
               <a
                 href="/donate"
-                className="w-full no-underline inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700"
+                className="no-underline inline-flex items-center rounded-full bg-blue-600 px-5 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Donate Now

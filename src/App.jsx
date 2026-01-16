@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { OrganizationSchema, WebsiteSchema } from './components/SEO/StructuredData';
 import { Navbar } from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import { Hero } from "./components/sections/Hero"
@@ -187,36 +189,43 @@ const AppRoutes = ({ activeField, setActiveField, fields, fieldBgColors }) => {
 
 function App() {
   const [activeField, setActiveField] = useState('EDUCATION');
-  const fields = ['EDUCATION', 'HEALTH', 'ENVIRONMENT', 'HER POWER', 'LIVELIHOOD'];
-  
+  const fields = ['EDUCATION', 'HEALTH', 'HER POWER', 'LIVELIHOOD', 'ENVIRONMENT'];
   const fieldBgColors = {
     'EDUCATION': 'bg-blue-50',
     'HEALTH': 'bg-green-50',
-    'ENVIRONMENT': 'bg-emerald-50',
     'HER POWER': 'bg-pink-50',
-    'LIVELIHOOD': 'bg-amber-50'
+    'LIVELIHOOD': 'bg-yellow-50',
+    'ENVIRONMENT': 'bg-teal-50'
   };
 
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-white w-full overflow-x-hidden">
-        <ScrollToTop />
-        <header className="w-full">
-          <Navbar />
-        </header>
-        <main className="flex-grow w-full">
-          <div className="w-full max-w-full">
-            <AppRoutes 
-              activeField={activeField}
-              setActiveField={setActiveField}
-              fields={fields}
-              fieldBgColors={fieldBgColors}
-            />
-          </div>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Helmet>
+        <title>Vaani Foundation | Empowering Communities</title>
+        <meta name="description" content="Vaani Foundation is a non-profit organization dedicated to social welfare, education, healthcare, and community development initiatives in India." />
+      </Helmet>
+      <OrganizationSchema />
+      <WebsiteSchema />
+      <Router>
+        <div className="min-h-screen flex flex-col bg-white w-full overflow-x-hidden">
+          <ScrollToTop />
+          <header className="w-full">
+            <Navbar />
+          </header>
+          <main className="flex-grow w-full">
+            <div className="w-full max-w-full">
+              <AppRoutes 
+                activeField={activeField}
+                setActiveField={setActiveField}
+                fields={fields}
+                fieldBgColors={fieldBgColors}
+              />
+            </div>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </>
   )
 }
 

@@ -139,34 +139,34 @@ const WaysToHelp = () => {
         </div>
 
         {/* Enhanced CTA Section - Extra Wide Card */}
-        <div className="mt-20 relative overflow-hidden rounded-2xl p-8 md:p-12 bg-sky-50 border-2 border-sky-100 transform transition-all duration-300 hover:shadow-lg w-[calc(100%+4rem)] -mx-8 max-w-[1400px] mx-auto">
+        <div className="mt-12 md:mt-20 relative overflow-hidden rounded-xl md:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 bg-sky-50 border-2 border-sky-100 transform transition-all duration-300 hover:shadow-lg w-full max-w-7xl mx-auto">
           <div className="relative z-10 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold text-sky-800 mb-6">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-sky-800 mb-4 md:mb-6">
               Together, We Can Create <span className="text-blue-600">Impact</span>
             </h3>
-            <p className="text-lg text-sky-700 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-sky-700 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed">
               Your support makes our work possible. Choose how you'd like to contribute and be a part of our mission to create positive change.
             </p>
-            <div className="flex flex-wrap justify-center gap-5">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-5">
               <a 
                 href="/donate" 
-                className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transform transition-all duration-300 font-medium text-base shadow-md hover:shadow-lg flex items-center"
+                className="px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transform transition-all duration-300 font-medium text-sm sm:text-base shadow-md hover:shadow-lg flex items-center justify-center"
               >
-                <Heart className="w-4 h-4 mr-2" />
+                <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 Donate Now
               </a>
               <a 
                 href="/get-involved/Volunteer" 
-                className="px-8 py-3 bg-white text-blue-700 border-2 border-blue-200 rounded-lg hover:bg-blue-50 hover:scale-105 transform transition-all duration-300 font-medium text-base shadow-md hover:shadow-lg flex items-center"
+                className="px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 bg-white text-blue-700 border-2 border-blue-200 rounded-lg hover:bg-blue-50 hover:scale-105 transform transition-all duration-300 font-medium text-sm sm:text-base shadow-md hover:shadow-lg flex items-center justify-center"
               >
-                <Users className="w-4 h-4 mr-2" />
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 Volunteer
               </a>
               <a 
                 href="/contact" 
-                className="px-8 py-3 bg-sky-100 text-sky-800 border-2 border-sky-200 rounded-lg hover:bg-white hover:scale-105 transform transition-all duration-300 font-medium text-base shadow-md hover:shadow-lg flex items-center"
+                className="px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 bg-sky-100 text-sky-800 border-2 border-sky-200 rounded-lg hover:bg-white hover:scale-105 transform transition-all duration-300 font-medium text-sm sm:text-base shadow-md hover:shadow-lg flex items-center justify-center"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                 Contact Us
               </a>
             </div>

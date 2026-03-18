@@ -17,6 +17,10 @@ import petronetLogo from '../../assets/company/petronet.jpg';
 import schotLogo from '../../assets/company/schot.jpg';
 import sunPharmaLogo from '../../assets/company/sun pharma.jpg';
 import viswaatLogo from '../../assets/company/viswaat.jpg';
+import isgecLogo from '../../assets/company/isgec.jpg';
+import kpHumanLogo from '../../assets/company/kp human.jpg';
+import unitopLogo from '../../assets/company/unitop.jpg';
+import uplLogo from '../../assets/company/upl.jpg';
 
 const OurPartners = () => {
   const corporatePartners = [
@@ -30,6 +34,10 @@ const OurPartners = () => {
     { id: 8, name: 'Schot', logo: schotLogo },
     { id: 9, name: 'Sun Pharma', logo: sunPharmaLogo },
     { id: 10, name: 'Viswaat', logo: viswaatLogo },
+    { id: 11, name: 'Isgec', logo: isgecLogo },
+    { id: 12, name: 'KP Human', logo: kpHumanLogo },
+    { id: 13, name: 'Unitop', logo: unitopLogo },
+    { id: 14, name: 'UPL', logo: uplLogo },
   ];
 
   const partnershipBenefits = [
@@ -38,13 +46,7 @@ const OurPartners = () => {
     "Sustainable Development Focus"
   ];
 
-  const governmentCollaboration = [
-    "Rural Development Programs",
-    "Healthcare Initiatives",
-    "Education & Skill Development",
-    "Environmental Conservation"
-  ];
-
+  
   return (
     <section className="w-full pt-0 pb-16 bg-blue-50">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -115,7 +117,7 @@ const OurPartners = () => {
           }
         `}</style>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 px-2 sm:px-0">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 mb-12 md:mb-16 px-2 sm:px-0">
           {/* Corporate Partners */}
           <div className="bg-white rounded-lg p-5 sm:p-6 md:p-8 w-full overflow-hidden">
             <div className="mb-6">
@@ -131,22 +133,22 @@ const OurPartners = () => {
               <div className="flex gap-8 w-max animate-marquee hover:animation-pause">
                 {/* First set of logos */}
                 {corporatePartners.map((partner, index) => (
-                  <div key={`first-${partner.id}`} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-1">
+                  <div key={`first-${partner.id}`} className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 p-3 sm:p-4 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-2">
                     <img 
                       src={partner.logo} 
                       alt={partner.name}
-                      className="max-h-full max-w-full object-contain"
+                      className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 object-contain"
                       loading="lazy"
                     />
                   </div>
                 ))}
                 {/* Second set of logos (duplicate for seamless loop) */}
                 {corporatePartners.map((partner, index) => (
-                  <div key={`second-${partner.id}`} className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-1">
+                  <div key={`second-${partner.id}`} className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 p-3 sm:p-4 bg-white border border-gray-100 rounded-lg shadow-sm shrink-0 flex items-center justify-center mx-2">
                     <img 
                       src={partner.logo} 
                       alt={partner.name}
-                      className="max-h-full max-w-full object-contain"
+                      className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 object-contain"
                       loading="lazy"
                     />
                   </div>
@@ -165,26 +167,6 @@ const OurPartners = () => {
                 }
               `}</style>
             </div>
-          </div>
-
-          {/* Government & Public Institution Collaboration */}
-          <div className="bg-white rounded-lg p-5 sm:p-6 md:p-8 w-full overflow-hidden">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">Government & Public Institution Collaboration</h3>
-              <p className="text-gray-600">
-               Vaani Foundation actively collabborates with govenment departments and public institutions to ensure alignment with national priorities and community needs.
-              </p>
-            </div>
-            <ul className="space-y-3 mb-6">
-              {governmentCollaboration.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
@@ -225,6 +207,44 @@ const OurPartners = () => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Government & Public Institution Collaboration Section */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 mt-12">
+          <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-md">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Government & Public Institution Collaboration</h2>
+            <p className="text-gray-600 mb-6 text-base sm:text-lg">
+              Vaani Foundation actively collaborates with government departments and
+              public institutions to ensure alignment with national priorities and
+              community needs.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Rural Development Programs
+              </li>
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Healthcare Initiatives
+              </li>
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Education & Skill Development
+              </li>
+              <li className="flex items-center text-gray-700">
+                <svg className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Environmental Conservation
+              </li>
+            </ul>
           </div>
         </div>
       </div>

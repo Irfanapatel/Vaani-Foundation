@@ -9,19 +9,19 @@ const ImpactAtGlance = () => {
       bgColor: 'bg-blue-50'
     },
     {
-      number: '50+',
+      number: '25+',
       label: 'VILLAGES & SLUMS',
       description: 'are reached out to across the country',
       bgColor: 'bg-blue-100'
     },
     {
-      number: '200+',
+      number: '50+',
       label: 'PROJECTS',
       description: 'focused on education, healthcare, and women empowerment',
       bgColor: 'bg-blue-50'
     },
     {
-      number: '5+',
+      number: '3+',
       label: 'STATES',
       description: 'are reached including the remotest areas',
       bgColor: 'bg-blue-100'

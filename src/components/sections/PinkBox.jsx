@@ -16,7 +16,7 @@ function PinkBox() {
         <div className="space-y-6 text-lg text-gray-700 mb-6 text-justify">
           {/* First 3 paragraphs always visible */}
           <p>
-            At Vaani Foundation, we believe that compassion, community and collaboration are the roots of lasting change. Established in 2023 in Bharuch, Gujarat, Vaani Foundation is a non-governmental organization dedicated to empowering underprivileged and rural communities. Our mission is simple yet powerful — to uplift lives through education, healthcare, environmental sustainability and social welfare initiatives that create long-term measurable impact.
+            At Vaani Foundation, we believe that compassion, community and collaboration are the roots of lasting change. Established in 2023 in Bharuch, Gujarat, Vaani Foundation is a non-governmental organization dedicated to empowering underprivileged and rural communities. Our mission is simple yet powerful — to uplift lives through <b>Education, Healthcare, Environmental sustainability and Social welfare initiatives</b> that create long-term measurable impact.
           </p>
           <p>
             We started with a small vision — to reach people who are often unheard and unseen. Over time, that vision grew into a movement of hope, connecting hundreds of individuals, families and villages through purposeful action. At the heart of every project we take up lies a belief: real progress happens only when communities take part in shaping their own future.

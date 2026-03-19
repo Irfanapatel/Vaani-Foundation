@@ -32,6 +32,8 @@ import unitopLogo from '../../assets/company/unitop.jpg';
 
 import uplLogo from '../../assets/company/upl.jpg';
 
+import aartiIndustriesLogo from '../../assets/company/aarti industries.jpg';
+
 
 
 const partners = [
@@ -63,6 +65,8 @@ const partners = [
   { id: 13, name: 'Unitop', logo: unitopLogo },
 
   { id: 14, name: 'UPL', logo: uplLogo },
+
+  { id: 15, name: 'Aarti Industries', logo: aartiIndustriesLogo },
 
 ];
 

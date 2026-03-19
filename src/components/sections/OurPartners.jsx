@@ -21,6 +21,7 @@ import isgecLogo from '../../assets/company/isgec.jpg';
 import kpHumanLogo from '../../assets/company/kp human.jpg';
 import unitopLogo from '../../assets/company/unitop.jpg';
 import uplLogo from '../../assets/company/upl.jpg';
+import aartiIndustriesLogo from '../../assets/company/aarti industries.jpg';
 
 const OurPartners = () => {
   const corporatePartners = [
@@ -38,6 +39,7 @@ const OurPartners = () => {
     { id: 12, name: 'KP Human', logo: kpHumanLogo },
     { id: 13, name: 'Unitop', logo: unitopLogo },
     { id: 14, name: 'UPL', logo: uplLogo },
+    { id: 15, name: 'Aarti Industries', logo: aartiIndustriesLogo },
   ];
 
   const partnershipBenefits = [
